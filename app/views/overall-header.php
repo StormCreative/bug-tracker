@@ -10,7 +10,6 @@
         <meta name="keywords" content="<?php echo $meta_keywords; ?>">
         <meta name="description" content="<?php echo $meta_desc; ?>">
 
-        <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
 
         <script src="<?php echo DIRECTORY; ?>assets/scripts/utils/modernizr.min.js"></script>
         <?php foreach ( $stylesheets as $style ): ?>
