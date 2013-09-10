@@ -1,9 +1,8 @@
 <?php
 
-class clients extends application_controller
+class Clients extends Application_controller
 {
 	private $_clients;
-	private $_admin_helper;
 
 	public function __Construct ()
 	{

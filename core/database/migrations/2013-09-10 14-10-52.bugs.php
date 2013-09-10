@@ -50,6 +50,18 @@ class build_bugs extends base_build
                                                                   "limit" => "11" ), 
                                                                   "fixed" => array ( "name" => "fixed",
                                                                   "type" => "int",
+                                                                  "limit" => "11" ),
+                                                                  "assigned" => array ( "name" => "assigned",
+                                                                  "type" => "varchar",
+                                                                  "limit" => "255" ),
+                                                                  "summary" => array ( "name" => "summary",
+                                                                  "type" => "varchar",
+                                                                  "limit" => "255" ),
+                                                                  "clients_id" => array ( "name" => "clients_id",
+                                                                  "type" => "int",
+                                                                  "limit" => "11" ),
+                                                                  "closed" => array ( "name" => "closed",
+                                                                  "type" => "int",
                                                                   "limit" => "11" )
                                                                    );
 

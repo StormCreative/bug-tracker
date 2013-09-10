@@ -1,22 +1,62 @@
 <section class="main__content">
 	<article class="main__editor">
-		<h1 class="main__editor--heading"><a href="<?php echo DIRECTORY; ?>admin/listing/table/bugs" class="back-button icon-arrow-left"></a>bugs Edit</h1>
+		<h1 class="main__editor--heading"><a href="<?php echo DIRECTORY; ?>admin/bugs/listing/<?php echo $_GET[ 'client_id' ]; ?>" class="back-button icon-arrow-left"></a>bugs Edit</h1>
 		<form class="main__editor--form" method="post" enctype="multipart/form-data">
 			<?php echo $feedback; ?>
 			<input type="hidden" name="bugs[id]" value="<?php echo $id; ?>" />
-			<p><label>clients_contacts_id:</label><input type="text" name="bugs[clients_contacts_id]" class="medium_input" value="<?php echo $clients_contacts_id; ?>"></p><p><label>url:</label><input type="text" name="bugs[url]" class="medium_input" value="<?php echo $url; ?>"></p><p><label>browser:</label><input type="text" name="bugs[browser]" class="medium_input" value="<?php echo $browser; ?>"></p><p><label>operating_system:</label><input type="text" name="bugs[operating_system]" class="medium_input" value="<?php echo $operating_system; ?>"></p><p><label>device:</label><input type="text" name="bugs[device]" class="medium_input" value="<?php echo $device; ?>"></p><p><label>severity:</label><input type="text" name="bugs[severity]" class="medium_input" value="<?php echo $severity; ?>"></p><div class="js-upload-container" data-type="image"></div>
-<?php if ( !!$gallery_items ) : ?>
-    <?php foreach ( $gallery_items as $item ) : ?>
-        <div id="<?php echo $item['imgname'] ?>" class="image_<?php echo $item[ 'id' ]; ?>">
-            <span class="images_holder"><img src="<?php echo DIRECTORY; ?>_admin/assets/uploads/images/<?php echo $item[ 'imgname' ]; ?>" /></span>
-            <ol class="hoz btns">
-                <input type="hidden" name="multi-image[<?php echo $item[ 'imgname' ]; ?>][id]" value="<?php echo $item[ 'id' ]; ?>" />
-                <input type="hidden" name="multi-image[<?php echo $item[ 'imgname' ]; ?>][imgname]" value="<?php echo $item[ 'imgname' ]; ?>" />
-                <input type="button" class="del-image js-delete-image delete-btn" data-id="<?php echo $item[ 'id' ]; ?>" data-imagename="<?php echo $item[ 'imgname' ]; ?>"  data-type="<?php echo $item[ 'imgname' ]; ?>" value="Delete" /></li>
-            </ol>
-        </div>
-    <?php endforeach; ?>
-<?php endif; ?><p><label>reproduce:</label><input type="text" name="bugs[reproduce]" class="medium_input" value="<?php echo $reproduce; ?>"></p>description <textarea class="js-wysiwyg" name="bugs[description]"><?php echo $description; ?></textarea><p><label>flagged:</label><input type="text" name="bugs[flagged]" class="medium_input" value="<?php echo $flagged; ?>"></p><p><label>fixed:</label><input type="text" name="bugs[fixed]" class="medium_input" value="<?php echo $fixed; ?>"></p>
+
+			<input type="hidden" name="bugs[clients_contacts_id]" class="medium_input" value="<?php echo $clients_contacts_id; ?>">
+			<input type="hidden" name="bugs[clients_id]" class="medium_input" value="<?php echo $_GET[ 'client_id' ]; ?>">
+
+			<p>
+				<label for="bugs[summary]">Summary</label>
+				<input type="text" name="bugs[summary]" class="medium_input" value="<?php echo $summary; ?>">
+			</p>
+
+			<p><label>Url:</label><input type="text" name="bugs[url]" class="medium_input" value="<?php echo $url; ?>"></p>
+			<p><label>Browser:</label><input type="text" name="bugs[browser]" class="medium_input" value="<?php echo $browser; ?>"></p>
+			<p><label>Operating system:</label><input type="text" name="bugs[operating_system]" class="medium_input" value="<?php echo $operating_system; ?>"></p>
+			<p><label>Device:</label><input type="text" name="bugs[device]" class="medium_input" value="<?php echo $device; ?>"></p>
+			<p>
+				<label for="bugs[severity]">Severity:</label>
+				<select name="bugs[severity]">
+					<option value=""></option>
+					<option value="Major">Major</option>
+					<option value="Minor">Minor</option>
+					<option value="Visual">Visual</option>
+				</select>
+			</p>
+
+			<p>Upload a screen shot of the error</p>
+			<div class="js-upload-container" data-type="image"></div>
+			<?php if ( !!$image ) : ?>
+				<div class="js-saved-image">
+					<input type="hidden" name="image" class="js-hidden-name" value="<?php echo $image; ?>" />
+					<img src="<?php echo DIRECTORY; ?>_admin/assets/uploads/images/<?php echo $image; ?>" />
+					<button type="button" class="js-delete-image delete-btn" data-imagename="<?php echo $image; ?>">Delete</button>
+				</div>
+			<?php endif; ?>
+
+			<p>
+				<label>Able to reproduce:</label>
+				Yes <input type="radio" name="bugs[reproduce]" <?php echo( !!$reproduce == 1 ? 'checked="checked"' : '' ); ?> value="1">
+				No <input type="radio" name="bugs[reproduce]" <?php echo( !!$reproduce == 0 ? 'checked="checked"' : '' ); ?> value="0">
+			</p>
+
+			Description <textarea class="js-wysiwyg" name="bugs[description]"><?php echo $description; ?></textarea>
+
+			<p>Assign users to this bug</p>
+			<?php foreach( Access_model::all_users() as $user ) : ?>
+				<?php echo $user[ 'name' ]; ?> <input type="checkbox" name="bugs[assigned][]" value="<?php echo $user[ 'id' ]; ?>" />
+			<?php endforeach; ?>
+
+			<p>
+				<label for="bugs[fixed]">Mark as fixed</label>
+				<input type="checkbox" name="bugs[fixed]" <?php echo( !!$fixed ? 'checked="checked"' : '' ); ?> value="1" />
+			</p>
+
+			<input type="hidden" name="bugs[flagged]" class="medium_input" value="<?php echo $flagged; ?>">
+
 			<p><input type="submit" name="submit" value="Save" /></p>
 		</form>
 	</article>

@@ -6,7 +6,7 @@ class AJAX_login
     {
         if (!!$_POST) {
             $access = new access_model();
-            $data = $access->where( "email = :email" )->where( "password = :password" )->all( array ( "email" => $_POST[ 'username' ], 'password' => sha1 ( $_POST[ 'password' ] ) ) );
+            $data = $access->where( "email = :email" )->where( "password = :password" )->all( array( "email" => $_POST[ 'username' ], 'password' => sha1 ( $_POST[ 'password' ] ) ) );
 
             if (!!$data) {
                 //Set up the users ID in the session

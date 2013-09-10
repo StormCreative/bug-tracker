@@ -46,6 +46,25 @@ class Bugs extends Application_controller
 
 		$this->setScript( 'main' );
 	}
+
+	public function listing( $id = "" )
+	{
+		$clients_model = new Clients_model();
+		$clients_model->find( $id );
+		$this->addTag( 'client_info', $clients_model->attributes );
+
+		$bugs_model = new Bugs_model();
+		//print_r( $bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND fixed = 0' )->all( array( 'clients_id' => $id ) ) );
+		$this->addTag( 'pending_bugs', $bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND closed = 0 AND fixed = 0' )->all( array( 'clients_id' => $id ) ) );
+
+		$bugs_model = new Bugs_model();
+		$this->addTag( 'fixed_bugs', $bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND closed = 0 AND fixed = 1' )->all( array( 'clients_id' => $id ) ) );
+
+		$bugs_model = new Bugs_model();
+		$this->addTag( 'closed_bugs', $bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND closed = 1' )->all( array( 'clients_id' => $id ) ) );
+
+		$this->addStyle( 'listing' );
+	}
 }
 
 ?>
