@@ -1,0 +1,64 @@
+@import "base";
+@import "fonts";
+
+$red: #E74C3C;
+$white: #FFF;
+
+h1 {
+	color: $red;
+}
+
+.login-area {
+	width: 30%;
+	position: relative;
+	left: 35%;
+}
+
+form {
+	width: 90%;
+	position: relative;
+	left: 5%;
+}
+
+label {
+	display: block;
+	margin: 5px;
+	font-size: 20px;
+}
+
+input {
+	display: block;
+	margin: 5px;
+	width: 60%;
+	height: 30px;
+}
+
+.login-button {
+	-webkit-appearance: none;
+
+	width: 30%;
+	font-size: 20px;
+	position: relative;
+	left: 15%;
+	background-color: $white;
+	color: $red;
+	border: 1px solid $red;
+	margin-top: 10px;
+}
+
+.login-button:hover {
+	@extend .login-button;
+
+	cursor: pointer;
+}
+
+.forgot-password {
+
+	a {
+		font-size: 20px;
+		color: $red;
+		text-decoration: none;
+	}
+
+	margin-top: 20px;
+}
