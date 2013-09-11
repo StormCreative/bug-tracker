@@ -9,3 +9,24 @@
 10-09-2013 18:04:01 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'clients_id' in where clause is ambiguous
 10-09-2013 18:19:15 Core/Database/Query: GetAssoc error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'closed' in 'where clause'
 11-09-2013 12:44:19 Core/Database/Query: GetAssoc error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+11-09-2013 17:41:00 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 17:41:00 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 17:41:18 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 17:41:18 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 17:41:59 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 17:41:59 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 17:59:57 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 17:59:57 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:06:06 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:06:06 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:06:47 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:06:47 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:06:47 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:06:56 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:06:56 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:13:50 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:13:50 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:16:50 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:16:50 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:17:05 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+11-09-2013 18:17:05 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound

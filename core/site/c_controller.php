@@ -66,8 +66,13 @@ class C_Controller
             //$this->addTag( 'dynamic_services', Menu::get_dynamic() );
         }
 
+        if( !!$_SESSION[ 'client' ] ) {
+            $clients_model = new Clients_model();
+            $clients_model->find( $_SESSION[ 'client' ][ 'clients_id' ] );
+            $this->addTag( 'client_information', $clients_model->attributes );
+        }
+
         $this->setScript ( 'main' );
-        
     }
 
     /**

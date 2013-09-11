@@ -23,6 +23,37 @@ class home extends c_controller
     		}
     	}
 
+        //Forgotten password login
+        if( !!$_POST[ 'user' ] ) {
+            $clients_contacts_model = new Clients_contacts_model();
+            $exists = $clients_contacts_model->where( 'email = :email' )->all( array( 'email' => $_POST[ 'user' ][ 'email' ] ) );
+            
+            if( !$exists ) {
+                $this->addTag( 'forgot_error', 'The email address you entered was not found. Please check your details or contact storm creative for assistance.' );
+            }
+            else {
+                $this->addTag( 'success', TRUE );
+                $user = array( 'id' => $exists[0][ 'id' ] );
+
+                $password = random_string( 10 );
+                $user[ 'password' ] = sha1( $password );
+
+                if( $clients_contacts_model->save( $user ) ) {
+                    $mail = new Mail( 'Your request for a new password has been successful. Your new password is ' . $password );
+                    $mail->to = $exists[0][ 'email' ];
+                    $mail->subject = 'Forgotten password: Storm Creative bug tracker';
+                    $mail->send();
+
+                    $this->addTag( 'forgot_success', 'Your request for a new password has been successful. Please check your email inbox for your new password.' );
+                }
+                else {
+                    $this->addTag( 'forgot_error', 'Your password could not be changed at this time. Please try again or contact storm creative for assistance.' );
+                }
+            }
+
+            $this->addTag( 'show', TRUE );
+        }
+
     	$this->addStyle( 'login' );
         $this->setView('home/index');
     }

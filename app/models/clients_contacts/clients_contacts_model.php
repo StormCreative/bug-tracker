@@ -10,8 +10,7 @@ class clients_contacts_model extends activerecord
 		$this->has_one = "";
         $this->has_many = array();
 
-		$this->validates = array( array( "not_empty", "title" ),
-								  array( "not_empty", "email" ) );
+		$this->validates = array();
 	}
 
 	public static function get( $id = "" )
