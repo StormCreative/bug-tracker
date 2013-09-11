@@ -34,6 +34,11 @@ class bugs_model extends activerecord
 			$bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND flagged = 1' );
 		}
 
+		if( !!$_SESSION[ 'bug_filter' ] ) {
+			$bugs_model->where( 'clients_contacts_id = :clients_contacts_id' );
+			$binds[ 'clients_contacts_id' ] = $_SESSION[ 'bug_filter' ];
+		}
+
 		$all = $bugs_model->all( $binds );
 
 		//We need to grab the users who are assigned to it

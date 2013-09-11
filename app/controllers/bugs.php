@@ -3,6 +3,10 @@
 
         public function listing()
         {
+            if( !!$_POST ) {
+                $_SESSION[ 'bug_filter' ] = $_POST[ 'bug_filter' ];
+            }
+
         	$this->addStyle( 'listing' );
         	$this->setView('bugs/listing');
         }

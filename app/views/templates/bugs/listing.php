@@ -6,12 +6,14 @@
 		<article class="listing">
 			<h2>Bug Listing <small>Total amount of active bugs: <span class="red_text"><?php echo Bugs_model::count_active(); ?></span></small></h2>
 			<div class="styled-select">
-				<select>
-					<option>All</option>
-					<?php foreach( Clients_contacts_model::get( $_SESSION[ 'client' ][ 'clients_id' ] ) as $person ) : ?>
-						<option value="<?php echo $person[ 'id' ]; ?>"><?php echo $person[ 'title' ]; ?></option>
-					<?php endforeach; ?>
-				</select>
+				<form action="#" method="POST">
+					<select name="bug_filter" onchange="this.form.submit()">
+						<option value="0">All</option>
+						<?php foreach( Clients_contacts_model::get( $_SESSION[ 'client' ][ 'clients_id' ] ) as $person ) : ?>
+							<option value="<?php echo $person[ 'id' ]; ?>" <?php echo( $_SESSION[ 'bug_filter' ] == $person[ 'id' ] ? 'selected="selected"' : '' ); ?>><?php echo $person[ 'title' ]; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</form>
 			</div>
 	        <?php if( !!$success_message ) : ?>
 	          <p class="success_message"><?php echo $success_message; ?></p>
@@ -21,7 +23,7 @@
 	              <ul class="tab_list">
 	                  <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#pending"><li class="js-tabs pending-tab active-tab" data-action="pending">Pending</li></a>
 	                  <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#fixed"><li class="js-tabs fixed-tab" data-action="fixed">Fixed</li></a>
-	                  <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#closed"><li class="js-tabs closed-tab" data-action="closed">Reviewed</li></a>
+	                  <!--<a href="<?php echo DIRECTORY; ?>admin/bugs/listing#closed"><li class="js-tabs closed-tab" data-action="closed">Reviewed</li></a>-->
 	              </ul>
 	              <div class="pending">
 	                <form action="<?php echo DIRECTORY; ?>admin/bugs/listing" method="POST">
@@ -56,20 +58,6 @@
 	                      <?php endif; ?>
 	                    </tbody>
 	                  </table>
-
-	                  <?php if( !!$pagination[ 'back' ] ) : ?>
-	                      <a href="<?php echo $pagination[ 'back' ]; ?>"><</a>
-	                  <?php endif; ?>
-
-	                  <?php if( !!$pagination[ 'middle' ] ) : ?>
-	                      <?php foreach( $pagination[ 'middle' ] as $middle ) : ?>
-	                          <a href="<?php echo $middle[ 'link' ]; ?>"><?php echo $middle[ 'page' ]; ?></a>
-	                      <?php endforeach; ?>
-	                  <?php endif; ?>
-
-	                  <?php if( !!$pagination[ 'next' ] ) : ?>
-	                    <a href="<?php echo $pagination[ 'next' ]; ?>">></a>
-	                  <?php endif; ?>
 
 	                  <input type="hidden" name="type" value="pending" />
 
@@ -111,6 +99,7 @@
 	                          </table>
 	                    </form>
 	              </div>
+	              <!--
 	              <div class="closed hide">
 	                <form action="#" method="POST">
 	                <div class="js-error"></div>
@@ -147,6 +136,7 @@
 	                      </div>
 	                   </form>
 	             </div>
+	         	-->
 	          </div>
 		</article>
 	</section>
