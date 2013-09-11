@@ -11,3 +11,9 @@ requirejs.config({
     }
 });
 
+var modules = [ '../views/' ];
+
+require( modules, function() {
+
+
+});
