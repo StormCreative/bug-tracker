@@ -34,9 +34,10 @@
 	                    <thead>
 	                      <tr>
 	                        <th>Name</th>
-	                        <th>Location</th>
-	                        <th>Current Position</th>
-	                        <th>Ref</th>
+	                        <th>Summary</th>
+	                        <th>Severity</th>
+	                        <th>Browser</th>
+	                         <th>Device</th>
 	                        <th><a href="<?php echo DIRECTORY; ?>admin/candidates/edit" class="add-button"><i class="icon-plus-sign"></i> Add</a></th>
 	                      </tr>
 	                    </thead>
@@ -45,14 +46,13 @@
 	                          <?php foreach( $unapproved as $unapproved_item ) : ?>
 	                              <tr>
 	                                  <td><input type="checkbox" name="user_id[]" value="<?php echo $unapproved_item[ 'id' ]; ?>" /></td>
-	                                  <td><?php echo $unapproved_item[ 'firstname' ] . ' ' . $unapproved_item[ 'lastname' ]; ?></td>
-	                                  <td><?php echo $unapproved_item[ 'county' ]; ?></td>
-	                                  <td><?php echo $unapproved_item[ 'current_position' ]; ?></td>
-	                                  <td><?php echo $unapproved_item[ 'ref' ]; ?></td>
+	                                  <td><?php echo $unapproved_item[ 'name' ] . ' ' . $unapproved_item[ 'lastname' ]; ?></td>
+	                                  <td><?php echo $unapproved_item[ 'summary' ]; ?></td>
+	                                  <td><?php echo $unapproved_item[ 'severity' ]; ?></td>
+	                                  <td><?php echo $unapproved_item[ 'browser' ]; ?></td>
+	                                  <td><?php echo $unapproved_item[ 'device' ]; ?></td>
 	                                  <td>
 	                                    <a href="<?php echo DIRECTORY; ?>admin/candidates/edit/<?php echo $unapproved_item[ 'id' ]; ?>" class="edit_icon icon-edit"></a>
-	                                    <a href="<?php echo DIRECTORY; ?>admin/candidates/approve/<?php echo $unapproved_item[ 'id' ]; ?>" class="edit_icon icon-thumbs-up"></a>
-	                                    <a href="<?php echo DIRECTORY; ?>admin/candidates/archive/<?php echo $unapproved_item[ 'id' ]; ?>" class="remove_icon icon-archive"></a>
 	                                  </td>
 	                              </tr>
 	                          <?php endforeach; ?>

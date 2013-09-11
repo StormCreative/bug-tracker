@@ -7,5 +7,11 @@
         	$this->setView('bugs/listing');
         }
 
+        public function edit()
+        {
+        	$this->addStyle( 'edit' );
+        	$this->setView('bugs/edit');
+        }
+
     }
   ?>
