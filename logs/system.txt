@@ -22,3 +22,10 @@
 10-09-2013 18:31:05 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 10-09-2013 18:37:06 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 10-09-2013 18:41:25 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+10-09-2013 18:46:45 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+10-09-2013 18:47:19 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+10-09-2013 18:47:52 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+11-09-2013 10:36:37 Core/Routing/Router: Threw exception: Could not find controller "bug" to load
+11-09-2013 10:36:40 Core/Routing/Router: Threw exception: Could not find controller "bug" to load
+11-09-2013 11:23:22 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+11-09-2013 11:24:41 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load

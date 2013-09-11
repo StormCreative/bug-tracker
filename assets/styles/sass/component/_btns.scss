@@ -1,0 +1,87 @@
+.add-button {
+	background: $blue;
+	border: none;
+	letter-spacing: 0;
+	color: white;
+	display: inline-block;
+	line-height: 28px;
+	padding-top: 3px;
+	text-align: center;
+	width: 95px;
+	float: right;
+	margin-right: 0px;
+	text-decoration: none;
+
+	border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+     transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+
+	.icon-plus {
+		margin-top: 2px;
+		margin-left: 10px;
+	}
+
+    &:hover,
+    &:focus {
+    	background: darken($blue, 10%)
+
+    }
+}
+
+.add-another {
+	background: $blue;
+	border: none;
+	letter-spacing: 0;
+	color: white;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 28px;
+	padding-top: 3px;
+	text-align: center;
+	width: 150px;
+	float: right;
+	margin-top: -5px;
+	margin-right: 0px;
+	text-decoration: none;
+
+	border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+     transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+
+	.icon-plus {
+		margin-top: 2px;
+		margin-left: 10px;
+	}
+
+    &:hover,
+    &:focus {
+    	background: darken($blue, 10%)
+
+    }
+}
+
+.save-button {
+	background: #72CAF0; /* Old browsers */
+	border: none;
+	display: inline-block;
+	color: #FFF;
+	cursor: pointer;
+	line-height: 40px;
+	font-size: 18px;
+	width: 120px;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+
+	&:hover {
+		background: #364A5E;
+	}
+}

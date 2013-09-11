@@ -45,6 +45,7 @@
 			   border-radius: 0;
 			   height: 34px;
 			   -webkit-appearance: none;
+			   outline: none;
 			   }
 		   }
 
@@ -132,13 +133,13 @@
 					padding-left: 8px;
 
 					&:first-child {
-						width: 25%;
+						width: 20%;
 					}
 					&:nth-child(2) {
-						width: 22%;
+						width: 25%;
 					}
 					&:nth-child(3) {
-						width: 25%;
+						width: 15%;
 					}
 
 					&:last-child {
