@@ -58,9 +58,9 @@
                                   </td>
                                   <td>
                                     <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-edit"></a>
-                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/fixed/<?php echo $bug[ 'id' ]; ?>" class="edit_icon icon-thumbs-up"></a>
+                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/change/fixed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-thumbs-up"></a>
                                     <?php if( cms_admin() ) : ?>
-                                      <a href="<?php echo DIRECTORY; ?>admin/bugs/closed/<?php echo $bug[ 'id' ]; ?>" class="edit_icon icon-thumbs-up"></a>
+                                      <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-thumbs-up"></a>
                                     <?php endif; ?>
                                   </td>
                               </tr>
@@ -107,7 +107,9 @@
                                           </td>
                                           <td>
                                             <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-edit"></a>
-                                            <a href="<?php echo DIRECTORY; ?>admin/bugs/archive/<?php echo $bug[ 'id' ]; ?>" class="remove_icon icon-archive"></a>
+                                            <?php if( cms_admin() ) : ?>
+                                              <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-archive"></a>
+                                            <?php endif; ?>
                                           </td>
                                       </tr>
                                   <?php endforeach; ?>
@@ -151,7 +153,12 @@
                                                 </ul>
                                               <?php endif; ?>
                                             </td>
-                                            <td></td>
+                                            <td>
+                                              <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-edit"></a>
+                                              <?php if( cms_admin() ) : ?>
+                                                <a href="<?php echo DIRECTORY; ?>admin/bugs/change/open/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-archive"></a>
+                                              <?php endif; ?>
+                                            </td>
                                         </tr>
                                     <?php endforeach; ?>
                                <?php else : ?>

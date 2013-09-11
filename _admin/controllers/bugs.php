@@ -57,6 +57,35 @@ class Bugs extends Application_controller
 
 		$this->addStyle( 'listing' );
 	}
+
+	public function change( $type = "" )
+	{
+		$attr = array( 'id' => $_GET[ 'id' ] );
+
+		//For some reasone type has a comma at the beginning
+		$type = str_replace( ',', '', $type );
+
+		switch( $type ) {
+			case 'open' :
+				$attr[ 'closed' ] = 0;
+				$attr[ 'fixed' ] = 0;
+				break;
+
+			case 'fixed' :
+				$attr[ 'closed' ] = 0;
+				$attr[ 'fixed' ] = 1; 
+				break;
+
+			case 'closed' :
+				$attr[ 'closed' ] = 1;
+				break;
+		}
+
+		$bugs_model = new Bugs_model();
+		$bugs_model->save( $attr, FALSE );
+
+		header( "Location: " . DIRECTORY . "admin/bugs/listing/" . $_GET[ 'client_id' ] );
+	}
 }
 
 ?>
