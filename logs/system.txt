@@ -74,3 +74,5 @@
 11-09-2013 17:14:19 Core/Routing/Router: Threw exception: Could not find controller "bug" to load
 11-09-2013 17:41:12 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 >>>>>>> 40f696c899383e0ad082d4530f58d872e9741d04
+11-09-2013 18:40:26 Core/Routing/Router: Threw exception: Could not find controller "DIRCTORYclients" to load
+11-09-2013 18:40:34 Core/Routing/Router: Threw exception: Could not find controller "clients" to load

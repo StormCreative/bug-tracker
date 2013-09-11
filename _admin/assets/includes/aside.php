@@ -1,7 +1,7 @@
 <aside class="sub__content">
 	<nav>
 		<ul>
-			<li><a href="dashoard"><i class="icon-dashboard"></i> Dashboard</a></li>
+			<li><a href="<?php echo DIRECTORY; ?>admin/dashboard"><i class="icon-dashboard"></i> Dashboard</a></li>
 
 			<?php if( $_SESSION[ 'user' ][ 'level' ] == 1 ) : ?>
 				<li><a href="<?php echo DIRECTORY; ?>admin/listing/table/clients"><i class="icon-cogs"></i> Client Management</a></li>
