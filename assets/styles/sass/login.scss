@@ -37,7 +37,7 @@ label {
 
 input {
 	background-color: #3B4148;
-	color: #767A7F;
+	color:white;
 	border: 0;
 	display: block;
 	font-size: 15px;
@@ -104,4 +104,12 @@ input {
 		padding: 0 16px;
 		
 	}
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
 }
