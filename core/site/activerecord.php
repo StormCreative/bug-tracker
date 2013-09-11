@@ -262,7 +262,7 @@ abstract class Activerecord
 
             $this->attributes['data'] = $data;
 
-            $result = $data
+            $result = $data;
         } else {
 
             $result = false;

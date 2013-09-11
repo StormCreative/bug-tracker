@@ -1,0 +1,33 @@
+.header {
+	margin: 0;
+	padding: 0;
+	line-height:90px;
+	overflow: hidden;
+	vertical-align: middle;
+	
+
+	.logo {
+		display: inline-block;
+		max-width: 250px;
+		vertical-align: middle;
+	}
+
+	h1 {
+		color: $red;
+		display: inline-block;
+		margin: 0 0 0 20px;
+		padding: 0;
+		vertical-align: middle;
+	}
+
+	.signout {
+		color: #EF7D16;
+		float: right;
+		margin-right: 20px;
+		text-decoration: none;
+
+		&:hover {
+		color: #DD5400;
+	}
+	}
+}

@@ -1,19 +1,44 @@
+.header {
+	margin: 0;
+	padding: 0;
+	line-height:90px;
+	overflow: hidden;
+	vertical-align: middle;
+	
+
+	.logo {
+		display: inline-block;
+		max-width: 250px;
+		vertical-align: middle;
+	}
+
+	h1 {
+		color: #E44C40;
+		display: inline-block;
+		font-size: 15px;
+		margin: 0 0 0 20px;
+		padding: 0;
+		vertical-align: bottom;
+	}
+
+	.signout {
+		color: #EF7D16;
+		float: right;
+		margin-right: 20px;
+		text-decoration: none;
+
+		&:hover {
+		color: #DD5400;
+	}
+	}
+}
+
+
+/*
 .settings {
-	background: #f0f0f0; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f0f0f0 0%, #e9e9e9 98%, #dddddd 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(98%,#e9e9e9), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #f0f0f0 0%,#e9e9e9 98%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #f0f0f0 0%,#e9e9e9 98%,#dddddd 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #f0f0f0 0%,#e9e9e9 98%,#dddddd 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #f0f0f0 0%,#e9e9e9 98%,#dddddd 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
     overflow: hidden;
     position: relative;
     z-index: 3;
-
-    box-shadow: 0 2px 4px #C7C7C7;
-    -moz-box-shadow: 0 2px 4px #C7C7C7;
-    -webkit-box-shadow: 0 2px 4px #C7C7C7;
 
     .settings__holder {
     	font-size: 1.75em;
@@ -21,13 +46,14 @@
     	margin: 0 auto;
     	max-width: 960px;
     	padding: 19px;
+    	position: relative;
 
     	li {
     		display: inline-block;
     		vertical-align: middle;
 
     		img {
-	    		max-width: 60%;
+	    		max-width: 50%;
 	    		vertical-align: middle;
 	    	}
     	}
@@ -42,7 +68,7 @@
 		padding: 0;
 		margin: 0;
 		position: relative;
-		right: -40px;
+		right: 0;
 
 		ul {
 			font-size: 16px;
@@ -95,12 +121,17 @@
 }
 
 .js-settings-button {
-	background: $brand-color-dark;
+	background: #E44C40;
 	color: white;
 	display: inline-block;
 	font-size: 19px;
 	margin: 4px 0;
-	padding: 6px 5px 6px 5px;
+	right: 30px;
+	position: absolute;
+	top: 13px;
+	padding: 0 0 0 0;
+	line-height: 40px;
+	width: 40px;
 	text-align: center;
 
 	border-radius: 50%;
@@ -113,6 +144,12 @@
 
     &:hover,
     &:focus {
-    	background: #b2cf55;
+    	background: #BF3A30;
+    }
+
+    .cogs_icon {
+    	position: relative;
+    	top: 3px;
     }
 }
+*/

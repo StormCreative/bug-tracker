@@ -1,4 +1,18 @@
 04-07-2013 15:55:36 Core/Routing/Router: Threw exception: Could not find controller "ncc" to load
+<<<<<<< HEAD
+10-09-2013 13:06:06 Core/Routing/Router: Threw exception: Could not find controller "DIRCTORYlisting" to load
+10-09-2013 13:06:14 Core/Routing/Router: Threw exception: Could not find controller "DIRCTORYlisting" to load
+10-09-2013 13:06:16 Core/Routing/Router: Threw exception: Could not find controller "DIRCTORYlisting" to load
+10-09-2013 13:06:18 Core/Routing/Router: Threw exception: Could not find controller "listing" to load
+10-09-2013 13:33:29 Core/Routing/Router: Threw exception: Could not find controller "door_type" to load
+10-09-2013 13:34:02 Core/Routing/Router: Threw exception: Could not find controller "door_type" to load
+10-09-2013 13:47:20 Core/Routing/Router: Threw exception: Could not find controller "contacts" to load
+10-09-2013 16:57:40 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+10-09-2013 16:59:08 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+10-09-2013 16:59:58 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+10-09-2013 17:05:12 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+10-09-2013 18:05:54 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+=======
 10-09-2013 15:41:39 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
 10-09-2013 15:42:56 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
 10-09-2013 15:42:58 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
@@ -22,6 +36,7 @@
 10-09-2013 18:31:05 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 10-09-2013 18:37:06 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 10-09-2013 18:41:25 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+<<<<<<< HEAD
 10-09-2013 18:46:45 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 10-09-2013 18:47:19 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 10-09-2013 18:47:52 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
@@ -29,3 +44,11 @@
 11-09-2013 10:36:40 Core/Routing/Router: Threw exception: Could not find controller "bug" to load
 11-09-2013 11:23:22 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 11-09-2013 11:24:41 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+=======
+>>>>>>> bebffe646bb5ff297e8600b9fc313be679c0bf77
+10-09-2013 18:43:00 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+>>>>>>> 5f34c2a0db71a736d9738b0c6e9c71db3aebbaf4
+11-09-2013 12:51:13 Core/Routing/Router: Threw exception: Could not find controller "lsting" to load
+11-09-2013 12:51:19 Core/Routing/Router: Threw exception: Could not find controller "listing" to load
+11-09-2013 17:14:19 Core/Routing/Router: Threw exception: Could not find controller "bug" to load
+11-09-2013 17:41:12 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load

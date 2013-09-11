@@ -283,3 +283,14 @@ function get_page()
 
     return ( !!$page ? $page : 'home' );
 }
+
+function cms_Admin() {
+
+    $return = FALSE;
+
+    if( $_SESSION[ 'user' ][ 'level' ] == 1 ) {
+        $return = TRUE;
+    }
+
+    return $return;
+}

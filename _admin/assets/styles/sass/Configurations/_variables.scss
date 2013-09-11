@@ -6,9 +6,9 @@ $brand-color-darker: darken($brand-color, 20%); // 20% darker colour
 $brand-color-darkest: darken($brand-color, 35%); // 20% darker colour
 
 //Fonts & sizes
-$base-font: sans-serif;
+$base-font: ttregular;
 $base-font-size: 16px;
 $base-font-size-nounit: 16;
 
 // Site dimensions
-$wrapper-max-width: 60em; // 960px / 16px
+$wrapper-max-width: 980px;
