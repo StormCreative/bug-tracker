@@ -27,7 +27,10 @@ define(['Backbone'], function(){
         validate: function() {
             var error_count = 0;
 
-            $('.js-validate').each( _.bind( function(key, value) {
+            var target = e.target,
+                fields = $( target ).find( '.js-validate' );
+
+            $( fields ).each( _.bind( function(key, value) {
                 var item = $(value);
                 var value = item.val();
 
