@@ -1,10 +1,16 @@
 <section class="main__content">
     <div class="container">
-      <div class="page_title">
-          <p class="page_name"><span class="js-title"><?php echo $client_info[ 'title' ]; ?> Listing</span></p>
+          <h2><span class="js-title"><?php echo $client_info[ 'title' ]; ?> Listing</span></h2>
+          <div class="styled-select">
+              <select>
+                  <option>All</option>
+                  <option>User 1</option>
+                  <option>User 2</option>
+                  <option>User 3</option>
+              </select>
+          </div>
           <!--<a href="#" class="js-filter">Filter</a>
           <a href="<?php echo DIRECTORY; ?>admin/candidates/listing?reset=true" class="reset">Reset</a>-->
-      </div>
       <div class="filter">
           <form action="#" method="POST">
             <input type="hidden" name="tab_value" class="js-tab-value" value="" />
@@ -49,7 +55,7 @@
                                   <td><?php echo $bug[ 'summary' ]; ?></td>
                                   <td>
                                     <?php if( !!$bug[ 'assigned' ] ) : ?>
-                                        <ul>
+                                        <ul class="assigned">
                                         <?php foreach( $bug[ 'assigned' ] as $assigned ) : ?>
                                           <li><?php echo $assigned[ 'title' ] ?></li>
                                         <?php endforeach; ?>
@@ -58,9 +64,9 @@
                                   </td>
                                   <td>
                                     <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-edit"></a>
-                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/change/fixed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-thumbs-up"></a>
+                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/change/fixed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-ok"></a>
                                     <?php if( cms_admin() ) : ?>
-                                      <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-thumbs-up"></a>
+                                      <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-trash"></a>
                                     <?php endif; ?>
                                   </td>
                               </tr>
@@ -98,7 +104,7 @@
                                           <td><?php echo $bug[ 'summary' ]; ?></td>
                                           <td>
                                             <?php if( !!$bug[ 'assigned' ] ) : ?>
-                                                <ul>
+                                                <ul class="assigned">
                                                 <?php foreach( $bug[ 'assigned' ] as $assigned ) : ?>
                                                   <li><?php echo $assigned[ 'title' ] ?></li>
                                                 <?php endforeach; ?>
@@ -108,7 +114,7 @@
                                           <td>
                                             <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-edit"></a>
                                             <?php if( cms_admin() ) : ?>
-                                              <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-archive"></a>
+                                              <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-ok"></a>
                                             <?php endif; ?>
                                           </td>
                                       </tr>
@@ -146,7 +152,7 @@
                                             <td><?php echo $bug[ 'summary' ]; ?></td>
                                             <td>
                                               <?php if( !!$bug[ 'assigned' ] ) : ?>
-                                                  <ul>
+                                                  <ul class="assigned">
                                                   <?php foreach( $bug[ 'assigned' ] as $assigned ) : ?>
                                                     <li><?php echo $assigned[ 'title' ] ?></li>
                                                   <?php endforeach; ?>
@@ -156,7 +162,7 @@
                                             <td>
                                               <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-edit"></a>
                                               <?php if( cms_admin() ) : ?>
-                                                <a href="<?php echo DIRECTORY; ?>admin/bugs/change/open/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-archive"></a>
+                                                <a href="<?php echo DIRECTORY; ?>admin/bugs/change/open/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-trash"></a>
                                               <?php endif; ?>
                                             </td>
                                         </tr>

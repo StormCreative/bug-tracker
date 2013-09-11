@@ -37,9 +37,12 @@
 10-09-2013 18:37:06 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 10-09-2013 18:41:25 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bebffe646bb5ff297e8600b9fc313be679c0bf77
 10-09-2013 18:43:00 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 =======
+=======
+>>>>>>> 40f696c899383e0ad082d4530f58d872e9741d04
 10-09-2013 18:46:45 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 10-09-2013 18:47:19 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 10-09-2013 18:47:52 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
@@ -47,6 +50,7 @@
 11-09-2013 10:36:40 Core/Routing/Router: Threw exception: Could not find controller "bug" to load
 11-09-2013 11:23:22 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 11-09-2013 11:24:41 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+<<<<<<< HEAD
 >>>>>>> e85fee376c48b315c92fca1dc9a2d8e27c5f2b25
 11-09-2013 12:15:52 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
 11-09-2013 12:16:12 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
@@ -60,3 +64,13 @@
 11-09-2013 13:54:16 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 11-09-2013 16:22:02 Core/Routing/Router: Threw exception: Could not find controller "AJAX_delete" to load
 11-09-2013 16:23:09 Core/Routing/Router: Threw exception: Could not find controller "ajax_delete" to load
+=======
+=======
+>>>>>>> bebffe646bb5ff297e8600b9fc313be679c0bf77
+10-09-2013 18:43:00 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+>>>>>>> 5f34c2a0db71a736d9738b0c6e9c71db3aebbaf4
+11-09-2013 12:51:13 Core/Routing/Router: Threw exception: Could not find controller "lsting" to load
+11-09-2013 12:51:19 Core/Routing/Router: Threw exception: Could not find controller "listing" to load
+11-09-2013 17:14:19 Core/Routing/Router: Threw exception: Could not find controller "bug" to load
+11-09-2013 17:41:12 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+>>>>>>> 40f696c899383e0ad082d4530f58d872e9741d04

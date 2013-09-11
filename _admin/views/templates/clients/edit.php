@@ -1,14 +1,15 @@
 <section class="main__content">
 	<article class="main__editor">
-		<h1 class="main__editor--heading"><a href="<?php echo DIRECTORY; ?>admin/listing/table/clients" class="back-button icon-arrow-left"></a>clients Edit</h1>
+		<h2><a href="<?php echo DIRECTORY; ?>admin/listing/table/clients" class="back-button icon-arrow-left"></a>clients Edit</h2>
 		<form class="main__editor--form" method="post" enctype="multipart/form-data">
 			<?php echo $feedback; ?>
 			<input type="hidden" name="clients[id]" value="<?php echo $id; ?>" />
 			<p><label>Title:</label><input type="text" name="clients[title]" class="medium_input" value="<?php echo $title; ?>"></p>
 			<p><label>Url:</label><input type="text" name="clients[url]" class="medium_input" value="<?php echo $url; ?>"></p>
-
+			<p><input type="submit" name="submit" value="Save" class="save-button"/></p>
+			</form>
 			<div class="holder">
-				<h2 class="page_title">Users</h2>
+				<h2>Users</h2>
 	            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_listing js-table">
 	              <thead>
 	                <tr>
@@ -20,7 +21,7 @@
 	              <tbody class="js-sortable js-body">
 	                <?php foreach ( $clients_contacts as $client ) : ?>
 	                	<tr class="js-row-door_client-<?php echo $client['id']; ?>" id="<?php echo $client['id']; ?>">
-	                        <td><input client="checkbox" name="selected" value="yes" class="checkbox js-delete-checkbox"></td>
+	                        <td><input type="checkbox" name="selected" value="yes" class="checkbox js-delete-checkbox"></td>
 	                        <td><?php echo $client[ 'title' ]; ?></td>    
 	                        <td>
 	                            <a href="<?php echo DIRECTORY; ?>admin/clients_contacts/edit/<?php echo $client['id']; ?>/?id=<?php echo $id; ?>" class="edit_icon icon-pencil"></a>
@@ -32,9 +33,6 @@
 	            </table>
 	            <input type="button" class="delete-button js-delete-popup" data-table="door_type" value="Delete">
 	        </div>
-
-			<p><input type="submit" name="submit" value="Save" /></p>
-		</form>
 	</article>
 </section>
 <script>

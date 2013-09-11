@@ -1,12 +1,44 @@
+.header {
+	margin: 0;
+	padding: 0;
+	line-height:90px;
+	overflow: hidden;
+	vertical-align: middle;
+	
+
+	.logo {
+		display: inline-block;
+		max-width: 250px;
+		vertical-align: middle;
+	}
+
+	h1 {
+		color: #E44C40;
+		display: inline-block;
+		font-size: 15px;
+		margin: 0 0 0 20px;
+		padding: 0;
+		vertical-align: bottom;
+	}
+
+	.signout {
+		color: #EF7D16;
+		float: right;
+		margin-right: 20px;
+		text-decoration: none;
+
+		&:hover {
+		color: #DD5400;
+	}
+	}
+}
+
+
+/*
 .settings {
-	background: #F9FDFD; /* Old browsers */
     overflow: hidden;
     position: relative;
     z-index: 3;
-
-    box-shadow: 0 2px 4px #C7C7C7;
-    -moz-box-shadow: 0 2px 4px #C7C7C7;
-    -webkit-box-shadow: 0 2px 4px #C7C7C7;
 
     .settings__holder {
     	font-size: 1.75em;
@@ -120,3 +152,4 @@
     	top: 3px;
     }
 }
+*/

@@ -1,3 +1,12 @@
+<div class="wrapper">
+    <header class="header">
+        <img src="<?php echo DIRECTORY; ?>assets/images/logo.png" class="logo"/>
+        <h1>Bug Tracker content management</h1>
+        <a href="#" class="signout"><i class="icon-signout"></i> Log out</a>
+    </header>
+</div>
+
+<!--
 <header class="settings">
     <ul class="settings__holder">
         <li class="settings__holder--img"><img src="<?php echo DIRECTORY; ?>_admin/assets/images/logo.png" alt="Company Name" /></li>
@@ -11,3 +20,4 @@
         </div>
     </ul>
 </header>
+-->

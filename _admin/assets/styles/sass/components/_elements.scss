@@ -439,10 +439,10 @@ textarea {
 }
 
 .add-button {
-	background: #40CC76; /* Old browsers */
+	background: #2A2D35;
 	border: none;
 	letter-spacing: 0;
-	color: white;
+	color: #FFF;
 	display: inline-block;
 	line-height: 28px;
 	padding-top: 3px;
@@ -450,12 +450,11 @@ textarea {
 	width: 95px;
 	float: right;
 	margin-right: 0px;
-
+	text-decoration: none;
 	border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-
-     transition: all 0.2s ease-in-out;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
 
@@ -466,7 +465,7 @@ textarea {
 
     &:hover,
     &:focus {
-    	background: #37B368; /* Old browsers */
+    	background: #131519; /* Old browsers */
 
     }
 }
@@ -642,6 +641,42 @@ fieldset {
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
+}
+
+.add-another {
+	background: $blue;
+	border: none;
+	letter-spacing: 0;
+	color: white;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 28px;
+	padding-top: 3px;
+	text-align: center;
+	width: 150px;
+	float: right;
+	margin-top: -5px;
+	margin-right: 0px;
+	text-decoration: none;
+
+	border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+     transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+
+	.icon-plus {
+		margin-top: 2px;
+		margin-left: 10px;
+	}
+
+    &:hover,
+    &:focus {
+    	background: darken($blue, 10%)
+
+    }
 }
 
 

@@ -1,0 +1,182 @@
+// Configurations/Settings
+@import "configurations/variables";
+//fonts
+@import "fonts/fonts";
+@import "fonts/font-awesome";
+//layouts
+@import "layouts/body";
+@import "layouts/container";
+@import "layouts/header";
+
+@import "components/delete-popup";
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+$red: #E74C3C;
+$blue: #2A2D35;
+
+html, body {
+    background: #2A2D35;
+      font-size: $base-font-size;
+    margin: 0;
+    padding: 0;
+    font-family: 'TTRegular';
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none !important; 
+}
+
+/* 
+<div class="wrapper"></div> 
+*/
+
+.wrapper {
+    margin: 0 auto 0 auto;
+    max-width: $wrapper-max-width;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/* 
+<aside class="sub__content"></aside> 
+*/
+
+.sub__content {
+    float: left;
+    margin: 0px 20px 0 0px;
+    padding: 0 0 0px 0;
+    width: 22%;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+/* 
+<section class="main__content"></section> 
+*/
+
+.main__content {
+    background: #EBF0F0;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 75%;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+a {
+    text-decoration: none;
+    
+    transition: color 0.2s ease 0s;
+    -moz-transition: color 0.2s ease 0s;
+    -webkit-transition: color 0.2s ease 0s;
+}
+
+a:hover,
+a:focus {
+    transition: color 0.2s ease 0s;
+    -moz-transition: color 0.2s ease 0s;
+    -webkit-transition: color 0.2s ease 0s;
+}
+
+h1 {
+    color: #FFF;
+    font-weight: normal;
+    margin: 0 0;
+    text-transform: uppercase;
+}
+
+// The reason important was added is because the text is generated via the CMS and in the design the first paragraph needs this styling.
+// :first-child did not work so first-of-type was implemented which worked apart from one browser. Yes you got it ie8!
+// As it needs to work for all browsers this method was used and unfortunately important had to be used to overwrite styles in the other spreadsheets targeting p tags
+h1 + p {
+    color: #231F20 !important;
+    font-size: 14px !important;
+}
+
+h2 {
+ color: #363B41;
+border-bottom: 1px solid #2A2D35;
+margin: 20px;
+padding: 0 0 10px 0;
+width: 95.5%;
+text-transform: uppercase;
+}
+
+h3 {
+color: #363B41;
+font-size: 15px;
+margin: 20px 20px 10px 20px;
+padding: 0 0 10px 0;
+width: 95.5%;
+text-transform: uppercase;
+}
+
+.holder {
+    margin: 0 0 1em 0;
+    padding: 10px;
+    overflow: hidden;
+    width: 100%;
+    /* CSS3 */
+    border-radius:  0 0 0.4em 0.4em;
+    -moz-border-radius: 0 0 0.4em 0.4em;
+    -webkit-border-radius: 0 0 0.4em 0.4em;
+}
+
+        .styled-select {
+           width: 172px;
+           height: 34px;
+           overflow: hidden;
+           position: absolute;
+           right: 10px;;
+           background: url(../images/new_arrow.png) no-repeat right #D9DDDF;
+           top: -9px;
+
+           select {
+               background: transparent;
+               color: $red;
+               width: 178px;
+               padding: 5px 8px;
+               font-size: 16px;
+               line-height: 1;
+               border: 0;
+               border-radius: 0;
+               height: 34px;
+               -webkit-appearance: none;
+               outline: none;
+               }
+           }
+
+
+/* Media Queries */
+@media screen and (max-width: 650px) {
+     aside, section {
+        float: none;
+        clear: left;
+        margin: 0 0 10px; 
+        width: 100% !important;
+        }
+
+        aside {
+            max-width: 608px !important;
+            width: 95% !important;
+        }
+
+        nav ul {
+            display:none !important;
+        }
+        nav select {
+            display: block !important;
+        }         
+}

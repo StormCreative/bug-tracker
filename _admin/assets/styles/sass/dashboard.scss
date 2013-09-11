@@ -1,5 +1,5 @@
 //structure
-@import "layouts/structure";
+@import "layouts/structure_old";
 //navigation
 @import "components/nav";
 //listing table
@@ -9,11 +9,12 @@
 
 
 .page_title {
-	background: #E1E2E3; /* Old browsers */
-	line-height: 35px;
-	padding: 0 5px;
-	overflow: hidden;
-	/* CSS3 */
+	color: #363B41;
+	border-bottom: 1px solid #2A2D35;
+	margin: 20px;
+	padding: 0 0 10px 0;
+	width: 95.5%;
+	text-transform: uppercase;
 
 	.page_name {
 		color: #364A5E;
@@ -42,6 +43,76 @@
 
 		&:hover {
 			background: #BEC3C7;
+		}
+	}
+}
+
+.add-project-btn {
+	float: right;
+	color: #EF7D16;
+	text-decoration: none;
+
+	&:hover {
+		color: #DD5400;
+	}
+}
+
+.projects {
+	list-style: none;
+	margin: 0 0 4em 5px;
+	padding: 0;
+	text-align:center;
+
+	a {
+		background: #94A5A6;
+		display: inline-block;
+		height: 159px;
+		margin: 0 0 10px 10px;
+		padding: 0;
+		width: 22.5%;
+		border-radius: 50%;
+
+		&:hover {
+			background: #7E8C8D;
+		}
+
+		li {
+			
+			display: inline-block;
+			height: 100%;
+			margin: 0;
+			padding: 10px;
+			width: 100%;
+			vertical-align: middle;
+
+
+			.notfication {
+				color: #E44C40;
+				font-size: 50px;
+				margin: 30px auto 0 auto;
+				border-radius: 50%;
+			}
+
+			.client {
+				color: white;
+				font-size: 18px;
+				margin: 0 auto;
+				padding: 0 0 10px 0;
+				width: 95.5%;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.add_project_tab {
+		background: #EF7D16;
+
+		.notfication {
+			color: white;
+		}
+
+		&:hover {
+			background: #DD5400;
 		}
 	}
 }

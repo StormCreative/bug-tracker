@@ -1,6 +1,6 @@
 <section class="main__content">
 	<article class="main__editor">
-		<h1 class="main__editor--heading"><a href="<?php echo DIRECTORY; ?>admin/bugs/listing/<?php echo $_GET[ 'client_id' ]; ?>" class="back-button icon-arrow-left"></a>bugs Edit</h1>
+		<h2><a href="<?php echo DIRECTORY; ?>admin/bugs/listing/<?php echo $_GET[ 'client_id' ]; ?>" class="back-button icon-arrow-left"></a>bugs Edit</h2>
 		<form class="main__editor--form" method="post" enctype="multipart/form-data">
 			<?php echo $feedback; ?>
 			<input type="hidden" name="bugs[id]" value="<?php echo $id; ?>" />
@@ -65,7 +65,7 @@
 
 			<input type="hidden" name="bugs[flagged]" class="medium_input" value="<?php echo $flagged; ?>">
 
-			<p><input type="submit" name="submit" value="Save" /></p>
+			<p><input type="submit" name="submit" value="Save" class="save-button"/></p>
 		</form>
 	</article>
 </section>

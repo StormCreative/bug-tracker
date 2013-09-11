@@ -1,6 +1,6 @@
 <section class="main__content">
 	<article class="main__editor">
-		<h1 class="main__editor--heading"><a href="<?php echo DIRECTORY; ?>admin/listing/table/access" class="back-button icon-arrow-left"></a>access Edit <a href="<?php echo DIRECTORY; ?>admin/access/edit">add another +</a></h1>
+		<h2><a href="<?php echo DIRECTORY; ?>admin/listing/table/access" class="back-button icon-arrow-left"></a>access Edit <a href="<?php echo DIRECTORY; ?>admin/access/edit" class="add-another">add another +</a></h2>
 		<form class="main__editor--form" method="post" enctype="multipart/form-data">
 			<?php echo $feedback; ?>
 			<input type="hidden" name="access[id]" value="<?php echo $id; ?>" />

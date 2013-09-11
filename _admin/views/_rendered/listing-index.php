@@ -1,14 +1,12 @@
     <section class="main__content">
         <div class="container">
-            <div class="page_title">
 
                 <input type="hidden" class="js-title-raw" value="<?php echo $table; ?>" />
-                <p class="page_name"><span class="js-title"><?php echo ucfirst(str_replace( "_", " ", $table)); ?></span> listing</p>
+                <h2><span class="js-title"><?php echo ucfirst(str_replace( "_", " ", $table)); ?></span> listing</h2>
                 <!--<a href="#" class="js-reset">Reset</a>-->
 
 
                 <!--<a href="#" class="js-filter">Filter</a>-->
-            </div>
             <div class="filter js-filter-container">
                 <dl class="filter_options">
                     <?php foreach ( $columns as $column ): ?>

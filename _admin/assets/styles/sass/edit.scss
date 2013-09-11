@@ -1,12 +1,11 @@
 //structure
-@import "layouts/structure";
+@import "layouts/structure_old";
 
 @import "components/nav";
 @import "components/elements";
 @import "components/wysiwyg";
 
 .main__editor {
-	background: #FFF;
 	margin: 2px auto 0;
 	width: 95%;
 	overflow: hidden;
@@ -44,7 +43,11 @@
 
 		label {
 			display: inline-block;
-			width: 15%;
+			font-size: 17px;
+			line-height: 1.4;
+			margin-top: 0.625em;
+			width: 25%;
+			vertical-align: top;
 		}
 
 		ul {
