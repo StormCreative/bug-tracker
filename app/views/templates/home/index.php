@@ -1,15 +1,32 @@
 <div class="login-area">
 	<img src="<?php echo DIRECTORY; ?>assets/images/logo.png" class="logo"/>
 	<h1>Bug Tracker</h1>
-	<form action="#" method="POST" class="js-login-form">
-		<p class="email"><i class="icon-envelope"></i><input type="email" name="user[email]" class="js-email" value="" placeholder="Email" /></p>
-		<p class="password"><i class="icon-lock"></i><input type="password" name="user[password]" class="js-password" value="" placeholder="Password"/></p>
-		<input type="submit" name="submit" class="login-button" value="Login" />
+	<p><?php echo $error; ?></p>
+	<form action="#" id="js-form" method="POST" class="js-process-form">
 
-		<a href="#" class="forgot-password js-forgot-password">Forgotten Password</a>
-		<div class="js-forgot-password-area hide">
-			<p class="email"><i class="icon-envelope"></i><input type="email" name="user[email]" class="js-email" value="" placeholder="Email" /></p>
-			<input type="submit" name="submit" class="submit-button" value="Submit" />
-		</div>
+		<p class="email">
+			<i class="icon-envelope"></i>
+			<input type="email" name="login[email]" class="js-validate" data-type="email" value="" placeholder="Email" />
+			<span class="js-error js-error-email error-msg hide">Please provide your email</span>
+		</p>
+
+		<p class="password">
+			<i class="icon-lock"></i>
+			<input type="password" name="login[password]" class="js-validate" data-type="password" value="" placeholder="Password"/>
+			<span class="js-error js-error-password error-msg hide">Please provide your password</span>
+		</p>
+
+		<input type="submit" name="submit" class="login-button" value="Login" />
 	</form>
+
+	<a href="#" class="forgot-password js-forgot-password" data-area="forgot-password-area">Forgotten Password</a>
+	<div class="js-forgot-password-area hide">
+		<form action="#" method="POST" class="js-process-form">
+			<p class="email">
+				<i class="icon-envelope"></i>
+				<input type="email" name="user[email]" class="js-email" value="" placeholder="Email" />
+			</p>
+			<input type="submit" name="submit" class="submit-button" value="Submit" />
+		</form>
+	</div>
 </div>

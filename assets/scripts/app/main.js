@@ -1,19 +1,20 @@
 requirejs.config({
     paths: {
-        Backbone: '../utils/libraries/backbone',
-        jquery: '../utils/libraries/jquery'
+        Backbone: '../utils/backbone',
+        jquery: '../utils/jquery'
     },
     shim: {
         'Backbone': {
-            deps: ['../utils/libraries/lodash', 'jquery'], // load dependencies
+            deps: ['../utils/lodash', 'jquery'], // load dependencies
             exports: 'Backbone' // use the global 'Backbone' as the module value
         }
     }
 });
 
-var modules = [ '../views/' ];
+var modules = [ '../views/Login', '../views/Validate', '../modules/helpers', 'tabs' ];
 
-require( modules, function() {
+require( modules, function( Login, Validate, helpers ) {
 
-
+    var Login = new Login(),
+        Validate = new Validate();
 });

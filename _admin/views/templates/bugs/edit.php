@@ -21,9 +21,9 @@
 				<label for="bugs[severity]">Severity:</label>
 				<select name="bugs[severity]">
 					<option value=""></option>
-					<option value="Major">Major</option>
-					<option value="Minor">Minor</option>
-					<option value="Visual">Visual</option>
+					<option value="Major" <?php echo( !!$severity == 'Major' ? 'selected="selected"' : '' ); ?>>Major</option>
+					<option value="Minor" <?php echo( !!$severity == 'Minor' ? 'selected="selected"' : '' ); ?>>Minor</option>
+					<option value="Visual" <?php echo( !!$severity == 'Visual' ? 'selected="selected"' : '' ); ?>>Visual</option>
 				</select>
 			</p>
 

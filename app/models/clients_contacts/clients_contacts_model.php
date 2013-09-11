@@ -13,6 +13,12 @@ class clients_contacts_model extends activerecord
 		$this->validates = array( array( "not_empty", "title" ),
 								  array( "not_empty", "email" ) );
 	}
+
+	public static function get( $id = "" )
+	{
+		$clients_contacts_model = new Clients_contacts_model();
+		return $clients_contacts_model->where( 'clients_id = :clients_id' )->all( array( 'clients_id' => $id ) );
+	}
 }
 
 ?>

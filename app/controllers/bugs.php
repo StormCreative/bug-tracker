@@ -13,5 +13,10 @@
         	$this->setView('bugs/edit');
         }
 
+        public function logout()
+        {
+            session_destroy();
+            header( 'Location: ' . DIRECTORY );
+        }
     }
   ?>

@@ -48,3 +48,13 @@
 11-09-2013 11:23:22 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 11-09-2013 11:24:41 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 >>>>>>> e85fee376c48b315c92fca1dc9a2d8e27c5f2b25
+11-09-2013 12:15:52 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+11-09-2013 12:16:12 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+11-09-2013 12:16:12 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+11-09-2013 12:16:12 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+11-09-2013 12:20:04 Core/Routing/Router: Threw exception: Could not find controller "bug" to load
+11-09-2013 12:20:31 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+11-09-2013 12:20:46 Core/Routing/Router: Threw exception: Could not find controller "bug" to load
+11-09-2013 12:52:47 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+11-09-2013 13:44:10 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+11-09-2013 13:54:16 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load

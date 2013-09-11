@@ -1,9 +1,5 @@
 <div class="wrapper">
-	<header class="header">
-		<img src="<?php echo DIRECTORY; ?>assets/images/logo.png" class="logo"/>
-		<h1>Bug Tracker</h1>
-		<a href="#" class="signout"><i class="icon-signout"></i> Log out</a>
-	</header>
+	<?php include "assets/includes/header.php"; ?>
 	<section class="main_list">
 		<aside class="filter">
 		</aside>

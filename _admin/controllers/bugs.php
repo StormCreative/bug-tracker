@@ -83,15 +83,18 @@ class Bugs extends Application_controller
 			case 'open' :
 				$attr[ 'closed' ] = 0;
 				$attr[ 'fixed' ] = 0;
+				$attr[ 'flagged' ] = 0;
 				break;
 
 			case 'fixed' :
 				$attr[ 'closed' ] = 0;
 				$attr[ 'fixed' ] = 1; 
+				$attr[ 'flagged' ] = 0;
 				break;
 
 			case 'closed' :
 				$attr[ 'closed' ] = 1;
+				$attr[ 'flagged' ] = 0;
 				break;
 		}
 

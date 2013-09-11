@@ -1,9 +1,5 @@
 <div class="wrapper">
-	<header class="header">
-		<img src="<?php echo DIRECTORY; ?>assets/images/logo.png" class="logo"/>
-		<h1>Bug Tracker</h1>
-		<a href="#" class="signout"><i class="icon-signout"></i> Log out</a>
-	</header>
+	<?php include "assets/includes/header.php"; ?>
 	<section class="main_list">
 		<aside class="filter">
 		</aside>
@@ -12,9 +8,9 @@
 			<div class="styled-select">
 				<select>
 					<option>All</option>
-					<option>User 1</option>
-					<option>User 2</option>
-					<option>User 3</option>
+					<?php foreach( Clients_contacts_model::get( $_SESSION[ 'client' ][ 'clients_id' ] ) as $person ) : ?>
+						<option value="<?php echo $person[ 'id' ]; ?>"><?php echo $person[ 'title' ]; ?></option>
+					<?php endforeach; ?>
 				</select>
 			</div>
 	        <?php if( !!$success_message ) : ?>
@@ -23,12 +19,12 @@
 	          <div class="holder">
 	            <div class="tabs">
 	              <ul class="tab_list">
-	                  <a href="<?php echo DIRECTORY; ?>admin/candidates/listing#pending"><li class="js-tabs pending-tab active-tab" data-action="pending">Pending</li></a>
-	                  <a href="<?php echo DIRECTORY; ?>admin/candidates/listing#live"><li class="js-tabs live-tab" data-action="live">Fixed</li></a>
-	                  <a href="<?php echo DIRECTORY; ?>admin/candidates/listing#archive"><li class="js-tabs archive-tab" data-action="archive">Reviewed</li></a>
+	                  <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#pending"><li class="js-tabs pending-tab active-tab" data-action="pending">Pending</li></a>
+	                  <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#fixed"><li class="js-tabs fixed-tab" data-action="fixed">Fixed</li></a>
+	                  <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#closed"><li class="js-tabs closed-tab" data-action="closed">Reviewed</li></a>
 	              </ul>
 	              <div class="pending">
-	                <form action="<?php echo DIRECTORY; ?>admin/candidates/listing" method="POST">
+	                <form action="<?php echo DIRECTORY; ?>admin/bugs/listing" method="POST">
 	                <div class="js-error"></div>
 	                  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_listing js-table">
 	                    <thead>
@@ -37,22 +33,21 @@
 	                        <th>Summary</th>
 	                        <th>Severity</th>
 	                        <th>Browser</th>
-	                         <th>Device</th>
-	                        <th><a href="<?php echo DIRECTORY; ?>admin/candidates/edit" class="add-button"><i class="icon-plus-sign"></i> Add</a></th>
+	                        <th>Device</th>
+	                        <th><a href="<?php echo DIRECTORY; ?>bugs/edit" class="add-button"><i class="icon-plus-sign"></i> Add</a></th>
 	                      </tr>
 	                    </thead>
 	                    <tbody class="js-sortable js-body">
-	                      <?php if( !!$unapproved ) : ?>
-	                          <?php foreach( $unapproved as $unapproved_item ) : ?>
+	                      <?php if( !!Bugs_model::get_bugs( 'open', $_SESSION[ 'client' ]['clients_id'] ) ) : ?>
+	                          <?php foreach( Bugs_model::get_bugs( 'open', $_SESSION[ 'client' ]['clients_id'] ) as $bug ) : ?>
 	                              <tr>
-	                                  <td><input type="checkbox" name="user_id[]" value="<?php echo $unapproved_item[ 'id' ]; ?>" /></td>
-	                                  <td><?php echo $unapproved_item[ 'name' ] . ' ' . $unapproved_item[ 'lastname' ]; ?></td>
-	                                  <td><?php echo $unapproved_item[ 'summary' ]; ?></td>
-	                                  <td><?php echo $unapproved_item[ 'severity' ]; ?></td>
-	                                  <td><?php echo $unapproved_item[ 'browser' ]; ?></td>
-	                                  <td><?php echo $unapproved_item[ 'device' ]; ?></td>
+	                                  <td><?php echo $bug[ '_title' ]; ?></td>
+	                                  <td><?php echo $bug[ 'summary' ]; ?></td>
+	                                  <td><?php echo $bug[ 'severity' ]; ?></td>
+	                                  <td><?php echo $bug[ 'browser' ]; ?></td>
+	                                  <td><?php echo $bug[ 'device' ]; ?></td>
 	                                  <td>
-	                                    <a href="<?php echo DIRECTORY; ?>admin/candidates/edit/<?php echo $unapproved_item[ 'id' ]; ?>" class="edit_icon icon-edit"></a>
+	                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $unapproved_item[ 'id' ]; ?>" class="edit_icon icon-edit"></a>
 	                                  </td>
 	                              </tr>
 	                          <?php endforeach; ?>
@@ -81,7 +76,7 @@
 
 	                </form>
 	              </div>
-	              <div class="live hide">
+	              <div class="fixed hide">
 	                <form action="#" method="POST">
 	                <div class="js-error"></div>
 	                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_listing js-table">
@@ -92,22 +87,20 @@
 	                                <th>Location</th>
 	                                <th>Current Position</th>
 	                                <th>Ref</th>
-	                                <th><a href="<?php echo DIRECTORY; ?>admin/candidates/edit" class="add-button"><i class="icon-plus-sign"></i> Add</a></th>
+	                                <th><a href="<?php echo DIRECTORY; ?>admin/bugs/edit" class="add-button"><i class="icon-plus-sign"></i> Add</a></th>
 	                              </tr>
 	                            </thead>
 	                            <tbody class="js-sortable js-body">
 
-	                                <?php if( !!$approved ) : ?>
-	                                  <?php foreach( $approved as $approved_item ) : ?>
+	                                <?php if( !!Bugs_model::get_bugs( 'closed', $_SESSION[ 'client' ]['clients_id'] ) ) : ?>
+	                                  <?php foreach( Bugs_model::get_bugs( 'closed', $_SESSION[ 'client' ]['clients_id'] ) as $bug ) : ?>
 	                                      <tr>
-	                                          <td><input type="checkbox" name="user_id[]" value="<?php echo $approved_item[ 'id' ]; ?>"></td>
-	                                          <td><?php echo $approved_item[ 'firstname' ] . ' ' . $approved_item[ 'lastname' ]; ?></td>
-	                                          <td><?php echo $approved_item[ 'county' ]; ?></td>
-	                                          <td><?php echo $approved_item[ 'current_position' ]; ?></td>
-	                                          <td><?php echo $approved_item[ 'ref' ]; ?></td>
+	                                          <td><?php echo $bug[ '_title' ]; ?></td>
+			                                  <td><?php echo $bug[ 'summary' ]; ?></td>
+			                                  <td><?php echo $bug[ 'severity' ]; ?></td>
+			                                  <td><?php echo $bug[ 'browser' ]; ?></td>
+			                                  <td><?php echo $bug[ 'device' ]; ?></td>
 	                                          <td>
-	                                            <a href="<?php echo DIRECTORY; ?>admin/candidates/edit/<?php echo $approved_item[ 'id' ]; ?>" class="edit_icon icon-edit"></a>
-	                                            <a href="<?php echo DIRECTORY; ?>admin/candidates/archive/<?php echo $approved_item[ 'id' ]; ?>" class="remove_icon icon-archive"></a>
 	                                          </td>
 	                                      </tr>
 	                                  <?php endforeach; ?>
@@ -133,7 +126,7 @@
 	                          <?php endif; ?>
 	                    </form>
 	              </div>
-	              <div class="archive hide">
+	              <div class="closed hide">
 	                <form action="#" method="POST">
 	                <div class="js-error"></div>
 	                          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_listing js-table">
@@ -144,24 +137,20 @@
 	                                <th>Location</th>
 	                                <th>Current Position</th>
 	                                <th>Ref</th>
-	                                <th><a href="<?php echo DIRECTORY; ?>admin/candidates/edit" class="add-button"><i class="icon-plus-sign"></i> Add</a></th>
+	                                <th><a href="<?php echo DIRECTORY; ?>admin/bugs/edit" class="add-button"><i class="icon-plus-sign"></i> Add</a></th>
 	                              </tr>
 	                            </thead>
 	                            <tbody class="js-sortable js-body">
 
-	                               <?php if( !!$archived ) : ?>
-	                                    <?php foreach( $archived as $archived_item ) : ?>
+	                               <?php if( !!Bugs_model::get_bugs( 'flagged', $_SESSION[ 'client' ]['clients_id'] ) ) : ?>
+	                                    <?php foreach( Bugs_model::get_bugs( 'flagged', $_SESSION[ 'client' ]['clients_id'] ) as $bug ) : ?>
 	                                        <tr>
-	                                            <td><input type="checkbox" name="user_id[]" value="<?php echo $archived_item[ 'id' ]; ?>"></td>
-	                                            <td><?php echo $archived_item[ 'firstname' ] . ' ' . $archived_item[ 'lastname' ]; ?></td>
-	                                            <td><?php echo $archived_item[ 'county' ]; ?></td>
-	                                            <td><?php echo $archived_item[ 'current_position' ]; ?></td>
-	                                            <td><?php echo $archived_item[ 'ref' ]; ?></td>
-	                                            <td>
-	                                              <a href="<?php echo DIRECTORY; ?>admin/candidates/edit/<?php echo $archived_item[ 'id' ]; ?>" class="edit_icon icon-edit"></a>
-	                                              <a href="<?php echo DIRECTORY; ?>admin/candidates/approve/<?php echo $archived_item[ 'id' ]; ?>" class="edit_icon icon-thumbs-up"></a>
-	                                              <a href="<?php echo DIRECTORY; ?>admin/candidates/unarchive/<?php echo $archived_item[ 'id' ]; ?>" class="remove_icon icon-archive" ></a>
-	                                            </td>
+	                                            <td><?php echo $bug[ '_title' ]; ?></td>
+				                                <td><?php echo $bug[ 'summary' ]; ?></td>
+				                                <td><?php echo $bug[ 'severity' ]; ?></td>
+				                                <td><?php echo $bug[ 'browser' ]; ?></td>
+				                                <td><?php echo $bug[ 'device' ]; ?></td>
+	                                            <td></td>
 	                                        </tr>
 	                                    <?php endforeach; ?>
 	                               <?php else : ?>
@@ -170,20 +159,6 @@
 
 	                            </tbody>
 	                          </table>
-
-	                          <?php if( !!$archived_pagination[ 'back' ] ) : ?>
-	                              <a href="<?php echo $archived_pagination[ 'back' ]; ?>"><</a>
-	                          <?php endif; ?>
-
-	                          <?php if( !!$archived_pagination[ 'middle' ] ) : ?>
-	                              <?php foreach( $archived_pagination[ 'middle' ] as $middle ) : ?>
-	                                  <a href="<?php echo $middle[ 'link' ]; ?>"><?php echo $middle[ 'page' ]; ?></a>
-	                              <?php endforeach; ?>
-	                          <?php endif; ?>
-
-	                          <?php if( !!$archived_pagination[ 'next' ] ) : ?>
-	                            <a href="<?php echo $archived_pagination[ 'next' ]; ?>">></a>
-	                          <?php endif; ?>
 	                      </div>
 	                   </form>
 	             </div>

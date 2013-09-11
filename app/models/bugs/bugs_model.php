@@ -22,13 +22,16 @@ class bugs_model extends activerecord
 		$binds = array( "clients_id" => $clients_id );
 
 		if( $type == 'open' ) {
-			$bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND closed = 0 AND fixed = 0' );
+			$bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND closed = 0 AND fixed = 0 AND flagged = 0' );
 		}
 		else if( $type == 'fixed' ) {
-			$bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND closed = 0 AND fixed = 1' );
+			$bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND closed = 0 AND fixed = 1 AND flagged = 0' );
 		}
 		else if( $type == 'closed' ) {
 			$bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND closed = 1' );
+		}
+		else if( $type == 'flagged' ) {
+			$bugs_model->where( DB_SUFFIX . '_bugs.clients_id = :clients_id AND flagged = 1' );
 		}
 
 		$all = $bugs_model->all( $binds );

@@ -1,6 +1,6 @@
 define( [ 'jquery' ], function( $ ) {
 
-	return helpers = function() {
+	return helpers = {
 
 		toggle: function( name ) {
 
