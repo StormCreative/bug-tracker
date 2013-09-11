@@ -36,6 +36,7 @@ class Bugs extends Application_controller
 
 			//Handle the image
             if ( !!$_POST["image"] || !!$_FILES ) {
+            	die( print_r( $_POST ) );
                 $_POST[ "bugs" ][ "image_id" ] = Image_helper::save_one( $_POST[ "image" ] );
             } 
             else {

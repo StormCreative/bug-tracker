@@ -56,6 +56,21 @@ class bugs_model extends activerecord
 		
 		return $all;
 	}
+
+	public function count_active()
+	{
+		$bugs_model = new Bugs_model();
+		$all = $bugs_model->where( 'fixed = :fixed AND closed = :closed AND flagged = :flagged' )->all( array( 'fixed' => 0, 'closed' => 0, 'flagged' => 0 ) );
+
+		if( !!$all ) {
+			$count = count( $all );
+		}
+		else {
+			$count = 0;
+		}
+
+		return $count;
+	}
 }
 
 ?>

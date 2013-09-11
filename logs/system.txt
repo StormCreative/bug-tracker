@@ -58,3 +58,5 @@
 11-09-2013 12:52:47 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 11-09-2013 13:44:10 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
 11-09-2013 13:54:16 Core/Routing/Router: Threw exception: Could not find controller "candidates" to load
+11-09-2013 16:22:02 Core/Routing/Router: Threw exception: Could not find controller "AJAX_delete" to load
+11-09-2013 16:23:09 Core/Routing/Router: Threw exception: Could not find controller "ajax_delete" to load

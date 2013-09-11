@@ -18,3 +18,12 @@ require( modules, function( Login, Validate, helpers ) {
     var Login = new Login(),
         Validate = new Validate();
 });
+
+if ( window.File && window.FileReader && window.FileList && window.Blob ) {
+    require(['../views/ImageUpload'], function(ImageUpload) {
+        var imageupload = new ImageUpload ();
+    });
+}
+else {
+    require([ 'uploader' ]);
+}

@@ -7,18 +7,18 @@ class AJAX_delete
 
     public function __Construct ()
     {
-        $this->_image = new image_model();
-        $this->_upload = new uploads_model();
+        $this->_image = new Image_model();
     }
 
     public function normal_delete ()
     {
         if (!!$_POST) {
-            if ( $this->_image->delete_by_column ( 'imgname', $_POST[ 'imagename' ] ) )
+            if ( $this->_image->delete_by_column ( 'imgname', $_POST[ 'imagename' ] ) ) {
                 $return = array( 'status' => 200 );
-
-            else
+            }
+            else {
                $return = array( 'status' => 400, 'msg' => 'The image could not be deleted at this time' );
+            }
         }
 
         die( json_encode( $return ) );

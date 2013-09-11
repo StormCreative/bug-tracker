@@ -36,7 +36,7 @@ class AJAX_uploadify
 
 			if ( in_array ( $this->get_ext ( $filename ), $options[ 'file_type' ] ) )
 			{
-				if ( 1 == 2 )
+				if( LIVE )
 				{
 					$im = new Imagick ( $tempFile );
 					$im->setImageCompressionQuality ( 100 );
@@ -45,7 +45,7 @@ class AJAX_uploadify
 				}
 				else
 				{
-					$si = new simple_image ();
+					$si = new Simple_image ();
 					$si->load ( $true_tmp_name );
 					$si->resize_crop ( 500, 350 );
 					$si->save ( $options[ 'dest' ] . $filename );

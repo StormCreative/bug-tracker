@@ -4,7 +4,7 @@
 		<aside class="filter">
 		</aside>
 		<article class="listing">
-			<h2>Bug Listing <small>Total amount of bugs: <span class="red_text">10</span></small></h2>
+			<h2>Bug Listing <small>Total amount of active bugs: <span class="red_text"><?php echo Bugs_model::count_active(); ?></span></small></h2>
 			<div class="styled-select">
 				<select>
 					<option>All</option>
@@ -47,7 +47,7 @@
 	                                  <td><?php echo $bug[ 'browser' ]; ?></td>
 	                                  <td><?php echo $bug[ 'device' ]; ?></td>
 	                                  <td>
-	                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $unapproved_item[ 'id' ]; ?>" class="edit_icon icon-edit"></a>
+	                                    <a href="<?php echo DIRECTORY; ?>bugs/edit/<?php echo $bug[ 'id' ]; ?>" class="edit_icon icon-edit"></a>
 	                                  </td>
 	                              </tr>
 	                          <?php endforeach; ?>
@@ -71,7 +71,6 @@
 	                    <a href="<?php echo $pagination[ 'next' ]; ?>">></a>
 	                  <?php endif; ?>
 
-
 	                  <input type="hidden" name="type" value="pending" />
 
 	                </form>
@@ -82,11 +81,11 @@
 	                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_listing js-table">
 	                            <thead>
 	                              <tr>
-	                                <th></th>
 	                                <th>Name</th>
-	                                <th>Location</th>
-	                                <th>Current Position</th>
-	                                <th>Ref</th>
+			                        <th>Summary</th>
+			                        <th>Severity</th>
+			                        <th>Browser</th>
+			                        <th>Device</th>
 	                                <th><a href="<?php echo DIRECTORY; ?>admin/bugs/edit" class="add-button"><i class="icon-plus-sign"></i> Add</a></th>
 	                              </tr>
 	                            </thead>
@@ -110,20 +109,6 @@
 
 	                            </tbody>
 	                          </table>
-
-	                          <?php if( !!$approved_pagination[ 'back' ] ) : ?>
-	                              <a href="<?php echo $approved_pagination[ 'back' ]; ?>"><</a>
-	                          <?php endif; ?>
-
-	                          <?php if( !!$approved_pagination[ 'middle' ] ) : ?>
-	                              <?php foreach( $approved_pagination[ 'middle' ] as $middle ) : ?>
-	                                  <a href="<?php echo $middle[ 'link' ]; ?>"><?php echo $middle[ 'page' ]; ?></a>
-	                              <?php endforeach; ?>
-	                          <?php endif; ?>
-
-	                          <?php if( !!$approved_pagination[ 'next' ] ) : ?>
-	                            <a href="<?php echo $approved_pagination[ 'next' ]; ?>">></a>
-	                          <?php endif; ?>
 	                    </form>
 	              </div>
 	              <div class="closed hide">
@@ -132,11 +117,11 @@
 	                          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_listing js-table">
 	                            <thead>
 	                              <tr>
-	                                <th></th>
 	                                <th>Name</th>
-	                                <th>Location</th>
-	                                <th>Current Position</th>
-	                                <th>Ref</th>
+			                        <th>Summary</th>
+			                        <th>Severity</th>
+			                        <th>Browser</th>
+			                        <th>Device</th>
 	                                <th><a href="<?php echo DIRECTORY; ?>admin/bugs/edit" class="add-button"><i class="icon-plus-sign"></i> Add</a></th>
 	                              </tr>
 	                            </thead>

@@ -915,7 +915,7 @@ abstract class Activerecord
     public function delete_by_column ( $column = "", $value = "" )
     {
         if (!!$column && !!$value) {
-            $this->table()->query->plain( 'DELETE FROM '. $this->full_table() . ' WHERE ' . $column . ' = :' . $column, array ( $column => $value ) );
+            $this->table()->query->plain( 'DELETE FROM '. $this->full_table() . ' WHERE ' . $column . ' = :' . $column, array( $column => $value ) );
 
             return TRUE;
         } else

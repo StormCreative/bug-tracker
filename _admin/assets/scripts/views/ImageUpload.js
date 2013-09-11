@@ -236,7 +236,7 @@ define(['../../../../assets/scripts/utils/api-caller', 'Backbone'], function(api
                 imagename = $( target ).attr( 'data-imagename' ),
                 image_id = $( target ).attr( 'data-id' );
 
-            $.ajax({ url: this.site_path + 'AJAX_delete/normal_delete',
+            $.ajax({ url: this.site_path + 'ajax_delete/normal_delete',
                      data: { imagename: imagename },
                      type: 'POST',
                      dataType: 'JSON',

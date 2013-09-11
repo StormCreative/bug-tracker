@@ -16,12 +16,13 @@ class Image_helper
 		$image = new Image_model();
 
 		if ( !!$_POST[ 'normal_uploader' ] && !$imagename ) {
-            $uploader = new Ajax_uploadify ( FALSE );
-            $imagename = $uploader->get_name ();
+            $uploader = new Ajax_uploadify( FALSE );
+            $imagename = $uploader->get_name();
         }
 
-        if ( !!$imagename )
-            $image->save ( array ( 'imgname' => $imagename ) );
+        if ( !!$imagename ) {
+            $image->save( array( 'imgname' => $imagename ) );
+        }
 
         return $image->attributes[ 'id' ];
 	}
