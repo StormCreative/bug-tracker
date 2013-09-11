@@ -2,8 +2,8 @@
     <div class="container">
       <div class="page_title">
           <p class="page_name"><span class="js-title"><?php echo $client_info[ 'title' ]; ?> Listing</span></p>
-          <a href="#" class="js-filter">Filter</a>
-          <a href="<?php echo DIRECTORY; ?>admin/candidates/listing?reset=true" class="reset">Reset</a>
+          <!--<a href="#" class="js-filter">Filter</a>
+          <a href="<?php echo DIRECTORY; ?>admin/candidates/listing?reset=true" class="reset">Reset</a>-->
       </div>
       <div class="filter">
           <form action="#" method="POST">

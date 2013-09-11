@@ -15,9 +15,23 @@ class Bugs extends Application_controller
 	public function edit ( $id = "" )
 	{
 		$this->_bugs->attributes[ 'id' ] = !!$id ? $id : $_POST['bugs']['id'];
+		$this->_bugs->find( $this->_bugs->attributes[ 'id' ] );
 
 		if ( post_set() )
 		{
+			//Send emails informing users they have been assigned to bugs
+            foreach( $_POST[ 'bugs' ][ 'assigned' ] as $person ) {
+            	if( !in_array( $person, explode( ',', $this->_bugs->attributes[ 'assigned' ] ) ) ) {
+            		$access_model = new access_model();
+            		$access_model->find( $person );
+
+            		$mail = new Mail( "You have been assigned a new bug to fix on the storm digital bug tracker." );
+            		$mail->to = $access_model->attributes[ 'email' ];
+            		$mail->subject = 'You have a bug to fix!';
+            		$mail->send();
+            	}
+            }
+
 			$_POST[ 'bugs' ][ 'assigned' ] = implode( ',', $_POST[ 'bugs' ][ 'assigned' ] );
 
 			//Handle the image
@@ -29,10 +43,10 @@ class Bugs extends Application_controller
             }
 			
 			if ( !$this->_bugs->save( $_POST[ 'bugs' ] ) ) {
-				$feedback = organise_feedback ( $this->_bugs->errors, TRUE );
+				$feedback = organise_feedback( $this->_bugs->errors, TRUE );
 			}
 			else {
-				$feedback = organise_feedback ( $this->forms->getSuccessMessage () );
+				$feedback = organise_feedback( $this->forms->getSuccessMessage() );
 			}
 		}
 
