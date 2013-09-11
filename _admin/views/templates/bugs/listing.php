@@ -41,16 +41,27 @@
                       </tr>
                     </thead>
                     <tbody class="js-sortable js-body">
-                      <?php if( !!$pending_bugs ) : ?>
-                          <?php foreach( $pending_bugs as $bug ) : ?>
+                      <?php if( !!Bugs_model::get_bugs( 'open', $client_info['id'] ) ) : ?>
+                          <?php foreach( Bugs_model::get_bugs( 'open', $client_info['id'] ) as $bug ) : ?>
                               <tr>
                                   <td><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>" /></td>
                                   <td><?php echo $bug[ '_title' ]; ?></td>
                                   <td><?php echo $bug[ 'summary' ]; ?></td>
-                                  <td><?php echo $bug[ 'assigned' ]; ?></td>
                                   <td>
-                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $id; ?>" class="edit_icon icon-edit"></a>
-                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/approve/<?php echo $bug[ 'id' ]; ?>" class="edit_icon icon-thumbs-up"></a>
+                                    <?php if( !!$bug[ 'assigned' ] ) : ?>
+                                        <ul>
+                                        <?php foreach( $bug[ 'assigned' ] as $assigned ) : ?>
+                                          <li><?php echo $assigned[ 'title' ] ?></li>
+                                        <?php endforeach; ?>
+                                      </ul>
+                                    <?php endif; ?>
+                                  </td>
+                                  <td>
+                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-edit"></a>
+                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/fixed/<?php echo $bug[ 'id' ]; ?>" class="edit_icon icon-thumbs-up"></a>
+                                    <?php if( cms_admin() ) : ?>
+                                      <a href="<?php echo DIRECTORY; ?>admin/bugs/closed/<?php echo $bug[ 'id' ]; ?>" class="edit_icon icon-thumbs-up"></a>
+                                    <?php endif; ?>
                                   </td>
                               </tr>
                           <?php endforeach; ?>
@@ -79,15 +90,23 @@
                             </thead>
                             <tbody class="js-sortable js-body">
 
-                                <?php if( !!$fixed_bugs ) : ?>
-                                  <?php foreach( $fixed_bugs as $bug ) : ?>
+                                <?php if( !!Bugs_model::get_bugs( 'fixed', $client_info['id'] ) ) : ?>
+                                  <?php foreach( Bugs_model::get_bugs( 'fixed', $client_info['id'] ) as $bug ) : ?>
                                       <tr>
                                           <td><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>"></td>
                                           <td><?php echo $bug[ '_title' ]; ?></td>
                                           <td><?php echo $bug[ 'summary' ]; ?></td>
-                                          <td><?php echo $bug[ 'assigned' ]; ?></td>
                                           <td>
-                                            <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>" class="edit_icon icon-edit"></a>
+                                            <?php if( !!$bug[ 'assigned' ] ) : ?>
+                                                <ul>
+                                                <?php foreach( $bug[ 'assigned' ] as $assigned ) : ?>
+                                                  <li><?php echo $assigned[ 'title' ] ?></li>
+                                                <?php endforeach; ?>
+                                              </ul>
+                                            <?php endif; ?>
+                                          </td>
+                                          <td>
+                                            <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-edit"></a>
                                             <a href="<?php echo DIRECTORY; ?>admin/bugs/archive/<?php echo $bug[ 'id' ]; ?>" class="remove_icon icon-archive"></a>
                                           </td>
                                       </tr>
@@ -117,13 +136,21 @@
                             </thead>
                             <tbody class="js-sortable js-body">
 
-                               <?php if( !!$closed_bugs ) : ?>
-                                    <?php foreach( $closed_bugs as $bug ) : ?>
+                               <?php if( !!Bugs_model::get_bugs( 'closed', $client_info['id'] ) ) : ?>
+                                    <?php foreach( Bugs_model::get_bugs( 'closed', $client_info['id'] ) as $bug ) : ?>
                                         <tr>
                                             <td><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>"></td>
                                             <td><?php echo $bug[ '_title' ]; ?></td>
                                             <td><?php echo $bug[ 'summary' ]; ?></td>
-                                            <td><?php echo $bug[ 'assigned' ]; ?></td>
+                                            <td>
+                                              <?php if( !!$bug[ 'assigned' ] ) : ?>
+                                                  <ul>
+                                                  <?php foreach( $bug[ 'assigned' ] as $assigned ) : ?>
+                                                    <li><?php echo $assigned[ 'title' ] ?></li>
+                                                  <?php endforeach; ?>
+                                                </ul>
+                                              <?php endif; ?>
+                                            </td>
                                             <td></td>
                                         </tr>
                                     <?php endforeach; ?>

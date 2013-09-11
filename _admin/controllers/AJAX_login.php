@@ -11,6 +11,7 @@ class AJAX_login
             if (!!$data) {
                 //Set up the users ID in the session
                 $_SESSION[ 'user' ][ 'id' ] = $data[ 0 ][ 'id' ];
+                $_SESSION[ 'user' ][ 'level' ] = $data[0][ 'level' ];
 
                 $return = array( 'ok' );
             } else

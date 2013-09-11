@@ -47,13 +47,21 @@
 
 			<p>Assign users to this bug</p>
 			<?php foreach( Access_model::all_users() as $user ) : ?>
-				<?php echo $user[ 'name' ]; ?> <input type="checkbox" name="bugs[assigned][]" value="<?php echo $user[ 'id' ]; ?>" />
+				<p><?php echo $user[ 'title' ]; ?> <input type="checkbox" name="bugs[assigned][]" <?php echo( in_array( $user[ 'id' ], explode( ',', $assigned ) ) ? 'checked="checked"' : '' ); ?> value="<?php echo $user[ 'id' ]; ?>" /></p>
 			<?php endforeach; ?>
 
+			<hr>
 			<p>
 				<label for="bugs[fixed]">Mark as fixed</label>
 				<input type="checkbox" name="bugs[fixed]" <?php echo( !!$fixed ? 'checked="checked"' : '' ); ?> value="1" />
 			</p>
+
+			<?php if( cms_admin() ) : ?>
+				<p>
+					<label for="bugs[closed]">Mark as closed</label>
+					<input type="checkbox" name="bugs[closed]" <?php echo( !!$closed ? 'checked="checked"' : '' ); ?> value="1" />
+				</p>
+			<?php endif; ?>
 
 			<input type="hidden" name="bugs[flagged]" class="medium_input" value="<?php echo $flagged; ?>">
 

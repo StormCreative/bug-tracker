@@ -13,6 +13,17 @@ html, body {
 		   	box-sizing: border-box;
 }
 
+$red: #E74C3C;
+$blue: #2A2D35;
+
 @import "component/base";
 @import "fonts/fonts";
 @import "fonts/font-awesome";
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 980px;
+	padding: 0;
+}
+
+@import "component/header";
