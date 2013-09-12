@@ -36,3 +36,5 @@
 11-09-2013 18:23:49 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
 11-09-2013 18:32:35 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
 11-09-2013 18:32:35 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:00:17 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:00:17 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
