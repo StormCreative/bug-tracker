@@ -87,3 +87,12 @@
 12-09-2013 12:34:00 Core/Routing/Router: Threw exception: Could not find controller "gfhh" to load
 12-09-2013 12:35:40 Core/Routing/Router: Threw exception: Could not find controller "fhg" to load
 12-09-2013 12:36:28 Core/Routing/Router: Threw exception: Could not find controller "hgfh" to load
+12-09-2013 12:55:20 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 12:55:22 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 12:55:47 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 12:55:48 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 12:55:49 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 12:55:53 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 12:55:53 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 14:52:55 Core/Routing/Router: Threw exception: Could not find controller "qwfwq" to load
+12-09-2013 14:53:29 Core/Routing/Router: Threw exception: Could not find controller "fwq" to load
