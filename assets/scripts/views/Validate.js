@@ -22,8 +22,6 @@ define(['Backbone'], function(){
             if (this.errors) {
                 e.preventDefault();
             }
-
-            e.preventDefault();
         },
         
         validate: function( e ) {

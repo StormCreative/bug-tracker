@@ -1,7 +1,7 @@
 <div class="login-area">
 	<img src="<?php echo DIRECTORY; ?>assets/images/logo.png" class="logo"/>
 	<h1>Bug Tracker</h1>
-	<p class="error_message hide"><?php echo $error; ?></p>
+	<p class="error_message <?php echo !!$error ? '' : 'hide'; ?>"><?php echo $error; ?></p>
 	<form action="#" id="js-form" method="POST" class="js-process-form">
 
 		<p class="email">
@@ -21,7 +21,7 @@
 
 	<a href="#" class="forgot-password js-forgot-password" data-area="forgot-password-area">Forgotten Password</a>
 	<div class="js-forgot-password-area <?php echo !!$show ? '' : 'hide'; ?>">
-		<p><?php echo $forgot_error; ?></p>
+		<p class="error_message <?php echo !!$forgot_error ? '' : 'hide'; ?>"><?php echo $forgot_error; ?></p>
 		<?php if( $success == FALSE ) : ?>
 			<form action="#" method="POST" class="js-process-form">
 				<p class="email">
