@@ -27,7 +27,7 @@
 				<p class="email">
 					<i class="icon-envelope"></i>
 					<input type="email" name="user[email]" class="js-validate" data-type="email-forgot" value="" placeholder="Email" />
-					<span class="js-error js-error-email-forgot error-msg hide">Please provide your email</span>
+					<span class="js-error js-error-email-forgot error_message error-msg hide">Please provide your email</span>
 				</p>
 				<input type="submit" name="submit" class="submit-button" value="Submit" />
 			</form>
