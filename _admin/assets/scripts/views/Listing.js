@@ -9,7 +9,11 @@ define(['../utils/hogan', 'Backbone'], function(hogan){
 
             //Some properties
             var table = $( '.js-title-raw' ).val();
-            this.table = table.toLowerCase();
+
+            if( typeof table != 'undefined' ) {
+                this.table = table.toLowerCase();
+            }
+            
             this.error = $( '.js-error' );
 
             this.delete_id;

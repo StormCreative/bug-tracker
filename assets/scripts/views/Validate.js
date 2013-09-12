@@ -17,14 +17,16 @@ define(['Backbone'], function(){
 
         process: function(e) {
 
-            this.validate();
+            this.validate( e );
 
             if (this.errors) {
                 e.preventDefault();
             }
+
+            e.preventDefault();
         },
         
-        validate: function() {
+        validate: function( e ) {
             var error_count = 0;
 
             var target = e.target,

@@ -25,7 +25,7 @@ class Bugs extends Application_controller
             		$access_model = new access_model();
             		$access_model->find( $person );
 
-            		$mail = new Mail( "You have been assigned a new bug to fix on the storm digital bug tracker." );
+            		$mail = new Mail( "You have been assigned a new bug to fix on the storm digital bug tracker. For " . Clients_model::get_title( $this->_bugs->attributes[ 'clients_id' ] ) );
             		$mail->to = $access_model->attributes[ 'email' ];
             		$mail->subject = 'You have a bug to fix!';
             		$mail->send();
