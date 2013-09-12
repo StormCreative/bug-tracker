@@ -270,7 +270,6 @@ function class_active( $page = '' )
     if ( is_array($page) && in_array ( $current_page, $page ) ) {
         return 'class="active"';
     } elseif ( $page == $current_page )
-
         return 'class="active"';
     else
         return '';
@@ -284,7 +283,7 @@ function get_page()
     return ( !!$page ? $page : 'home' );
 }
 
-function cms_Admin() {
+function cms_admin() {
 
     $return = FALSE;
 
