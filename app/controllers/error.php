@@ -9,6 +9,7 @@ class error extends C_controller
 
     public function error_404()
     {
-    	die( 'This will be where the 404 page will appear' );
+    	$this->addStyle( '404' );
+        $this->setView('home/404');
     }
 }

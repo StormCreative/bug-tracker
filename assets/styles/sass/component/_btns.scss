@@ -105,6 +105,50 @@
     }
 }
 
+.delete-button, .js-remove-image, .delete-btn {
+	background: #E44C40; /* Old browsers */
+	border: none;
+	display: block;
+	color: #FFF;
+	font-family: TTRegular;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 6px;
+	text-align: center;
+	width: 80px;
+	text-decoration: none;
+	width: 80px;
+
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+
+	border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+    &:hover,
+    &:focus {
+    	background: #C1392B; /* Old browsers */
+    }
+}
+
+.action {
+	background: #9B58B5;
+	display: block;
+	color: #FFF;
+	cursor: pointer;
+	font-family: ttregular;
+	overflow: hidden;
+	margin: 10px 0;
+	padding: 4px 2px;
+	text-align: center;
+	width: 130px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
 .error_message {
 	background: #ff3236; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
