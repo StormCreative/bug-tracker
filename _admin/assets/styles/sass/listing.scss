@@ -329,4 +329,17 @@
 	}
 }
 
+.severity {
+	border-left: 5px solid;
+}
+
+.minor {
+	border-color: #EB974E;
+}
+.major {
+	border-color: #E74C3C;
+}
+.visual {
+	border-color: #9B59B6;
+}
 
