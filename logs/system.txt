@@ -84,3 +84,6 @@
 12-09-2013 10:02:56 Core/Routing/Router: Threw exception: Could not find controller "dashoard" to load
 >>>>>>> 3093156d7c4f10e8100b04da69ae5050aaac3eed
 12-09-2013 12:22:17 Core/Routing/Router: Threw exception: Could not find controller "login" to load
+12-09-2013 12:34:00 Core/Routing/Router: Threw exception: Could not find controller "gfhh" to load
+12-09-2013 12:35:40 Core/Routing/Router: Threw exception: Could not find controller "fhg" to load
+12-09-2013 12:36:28 Core/Routing/Router: Threw exception: Could not find controller "hgfh" to load
