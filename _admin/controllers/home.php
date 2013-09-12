@@ -4,6 +4,10 @@ class home extends application_controller
 {
     public function index ()
     {
+        if( !!$_SESSION[ 'user' ] ) {
+            header( "Location: " . DIRECTORY . "admin/dashboard" );
+        }
+
         $this->addStyle ( 'login' );
         $this->setScript ( 'login' );
 
@@ -15,7 +19,6 @@ class home extends application_controller
 
     public function device_test ()
     {
-
         $this->setScript( 'image-handler' );
 
         $this->setScript ( 'login' );

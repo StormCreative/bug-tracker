@@ -4,6 +4,10 @@ class home extends c_controller
 {
     public function index ()
     {
+        if( !!$_SESSION[ 'client' ] ) {
+            header( "Location: " . DIRECTORY . "bugs/listing" );
+        }
+
     	//Login logic
     	if( !!$_POST[ 'login' ] ) {
     		$clients_contacts_model = new Clients_contacts_model();

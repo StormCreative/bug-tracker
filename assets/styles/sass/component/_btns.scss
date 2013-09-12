@@ -105,6 +105,24 @@
     }
 }
 
+
+
+.action {
+	background: #9B58B5;
+	display: block;
+	color: #FFF;
+	cursor: pointer;
+	font-family: ttregular;
+	overflow: hidden;
+	margin: 10px 0;
+	padding: 4px 2px;
+	text-align: center;
+	width: 130px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
 .error_message {
 	background: #ff3236; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */

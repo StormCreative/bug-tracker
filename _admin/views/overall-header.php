@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
         <meta name="author" content="Storm Creative" />
 
-        <title>[SITE TITLE] - <?php echo $title; ?></title>
+        <title>Storm Creative Bug Tracker Admin</title>
 
         <script src="<?php echo DIRECTORY; ?>assets/scripts/utils/modernizr.min.js"></script>
         <?php foreach ( $stylesheets as $style ): ?>

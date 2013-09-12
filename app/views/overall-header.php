@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="author" content="Storm Creative" />
 
-        <title>Drapewell - <?php echo $title; ?></title>
+        <title>Storm Creative Bug Tracker</title>
         <meta name="keywords" content="<?php echo $meta_keywords; ?>">
         <meta name="description" content="<?php echo $meta_desc; ?>">
 

@@ -4,7 +4,7 @@
 		<aside class="filter">
 		</aside>
 		<article class="listing">
-			<h2>Bug Listing <small>Total amount of active bugs: <span class="red_text"><?php echo Bugs_model::count_active(); ?></span></small></h2>
+			<h2>Bug Listing <small>Total amount of active bugs: <span class="red_text"><?php echo Bugs_model::count_active( $_SESSION[ 'client' ][ 'clients_id' ] ); ?></span></small></h2>
 			<div class="styled-select">
 				<form action="#" method="POST">
 					<select name="bug_filter" onchange="this.form.submit()">

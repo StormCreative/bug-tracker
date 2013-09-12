@@ -87,6 +87,7 @@
 12-09-2013 12:34:00 Core/Routing/Router: Threw exception: Could not find controller "gfhh" to load
 12-09-2013 12:35:40 Core/Routing/Router: Threw exception: Could not find controller "fhg" to load
 12-09-2013 12:36:28 Core/Routing/Router: Threw exception: Could not find controller "hgfh" to load
+<<<<<<< HEAD
 12-09-2013 12:55:20 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
 12-09-2013 12:55:22 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
 12-09-2013 12:55:47 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
@@ -96,3 +97,18 @@
 12-09-2013 12:55:53 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
 12-09-2013 14:52:55 Core/Routing/Router: Threw exception: Could not find controller "qwfwq" to load
 12-09-2013 14:53:29 Core/Routing/Router: Threw exception: Could not find controller "fwq" to load
+=======
+12-09-2013 14:03:34 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:03:34 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:03:38 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:07:33 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:07:45 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:08:50 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:12:44 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:12:48 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:12:49 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:13:02 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:13:03 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:13:07 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+12-09-2013 14:13:09 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
+>>>>>>> f99f3e7cbca77be1d335d333447b93e64a66a1f9
