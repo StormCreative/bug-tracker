@@ -71,7 +71,7 @@
                                     <?php if( cms_admin() ) : ?>
                                       <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-trash"></a>
                                     <?php endif; ?>
-                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/change/flagged/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-ok"></a>
+                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/change/flagged/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-flag"></a>
                                   </td>
                               </tr>
                           <?php endforeach; ?>
@@ -120,7 +120,7 @@
                                             <?php if( cms_admin() ) : ?>
                                               <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-ok"></a>
                                             <?php endif; ?>
-                                            <a href="<?php echo DIRECTORY; ?>admin/bugs/change/flagged/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-ok"></a>
+                                            <a href="<?php echo DIRECTORY; ?>admin/bugs/change/flagged/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-flag"></a>
                                           </td>
                                       </tr>
                                   <?php endforeach; ?>
@@ -170,7 +170,7 @@
                                               <?php if( cms_admin() ) : ?>
                                                 <a href="<?php echo DIRECTORY; ?>admin/bugs/change/open/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-folder-open"></a>
                                               <?php endif; ?>
-                                              <a href="<?php echo DIRECTORY; ?>admin/bugs/change/flagged/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-ok"></a>
+                                              <a href="<?php echo DIRECTORY; ?>admin/bugs/change/flagged/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-flag"></a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
