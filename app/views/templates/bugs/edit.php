@@ -4,7 +4,7 @@
 		<aside class="filter">
 		</aside>
 		<article class="listing">
-			<h2>Report a bug <a href="<?php echo DIRECTORY; ?>admin/candidates/edit" class="add-another"><i class="icon-plus-sign"></i> Add Another</a></h2>
+			<h2><a href="<?php echo DIRECTORY; ?>bugs/listing/" class="back-button icon-arrow-left"></a>Report a bug <a href="<?php echo DIRECTORY; ?>admin/candidates/edit" class="add-another"><i class="icon-plus-sign"></i> Add Another</a></h2>
 	        <?php if( !!$success ) : ?>
 	          <p class="success_message"><?php echo $success; ?></p>
 	        <?php endif; ?>

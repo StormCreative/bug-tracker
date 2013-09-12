@@ -1,7 +1,7 @@
 <div class="login-area">
 	<img src="<?php echo DIRECTORY; ?>assets/images/logo.png" class="logo"/>
 	<h1>Bug Tracker</h1>
-	<p><?php echo $error; ?></p>
+	<p class="error_message hide"><?php echo $error; ?></p>
 	<form action="#" id="js-form" method="POST" class="js-process-form">
 
 		<p class="email">
