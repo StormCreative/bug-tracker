@@ -36,7 +36,6 @@ class Bugs extends Application_controller
 
 			//Handle the image
             if ( !!$_POST["image"] || !!$_FILES ) {
-            	die( print_r( $_POST ) );
                 $_POST[ "bugs" ][ "image_id" ] = Image_helper::save_one( $_POST[ "image" ] );
             } 
             else {
@@ -71,8 +70,13 @@ class Bugs extends Application_controller
 		$this->addTag( 'client_info', $clients_model->attributes );
 
 		//If the user filters save the selection in a session
-		if( !!$_POST[ 'person_filter' ] ) {
-			$_SESSION[ 'person_filter' ] = $_POST[ 'person_filter' ];
+		if( !!$_POST ) {
+			if( !!$_POST[ 'person_filter' ] ) {
+				$_SESSION[ 'person_filter' ] = $_POST[ 'person_filter' ];
+			}
+			else {
+				unset( $_SESSION[ 'person_filter' ] );
+			}
 		}
 
 		$this->addStyle( 'listing' );

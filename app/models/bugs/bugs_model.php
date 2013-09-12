@@ -38,6 +38,9 @@ class bugs_model extends activerecord
 			$bugs_model->where( 'clients_contacts_id = :clients_contacts_id' );
 			$binds[ 'clients_contacts_id' ] = $_SESSION[ 'bug_filter' ];
 		}
+		else if( !!$_SESSION[ 'person_filter' ] ) {
+			$bugs_model->where( 'FIND_IN_SET( ' . $_SESSION[ 'person_filter' ] . ', assigned )' );
+		}
 
 		$all = $bugs_model->all( $binds );
 
