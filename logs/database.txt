@@ -46,6 +46,12 @@
 12-09-2013 12:10:33 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
 12-09-2013 12:10:45 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
 12-09-2013 12:10:45 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+<<<<<<< HEAD
+12-09-2013 12:11:23 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:11:23 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:19:19 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:19:19 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+=======
 12-09-2013 12:12:28 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
 12-09-2013 12:12:28 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
 12-09-2013 12:13:21 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
@@ -59,3 +65,4 @@
 12-09-2013 12:17:57 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'clients_id' in where clause is ambiguous
 12-09-2013 12:17:57 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'clients_id' in where clause is ambiguous
 12-09-2013 12:17:57 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'clients_id' in where clause is ambiguous
+>>>>>>> 030a13283acd545621859d1b9f90e6d41664655f
