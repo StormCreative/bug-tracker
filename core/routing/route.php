@@ -41,9 +41,7 @@ class route
             $logger->set('Core/Routing/Router: Threw exception: Could not find controller "'.$controller.'" to load')
                    ->write();
 
-            //throw new Exception( 'Can not find specified controller to load' );
             header( "Location: " . DIRECTORY . "error/404" );
         }
     }
-
 }
