@@ -27,18 +27,21 @@ class route
             if ( !isset ( $method ) || $method == '' || $method == $controller || preg_match('/\?/', $method) )
                 $method = 'index';
 
-            // Load the method and the value if one is set
-            if( $con->{$method}( (!!$uri['else'] ? $uri['else'] : '') ))
+            if( !method_exists( $con, $method ) ) {
+                header( "Location: " . DIRECTORY . "error/404" );
+            }
 
+            // Load the method and the value if one is set
+            if( $con->{$method}( (!!$uri['else'] ? $uri['else'] : '') )) {
                 return TRUE;
+            }
         } else {
 
             $logger = new Logger('system');
             $logger->set('Core/Routing/Router: Threw exception: Could not find controller "'.$controller.'" to load')
                    ->write();
 
-            throw new Exception( 'Can not find specified controller to load' );
+            header( "Location: " . DIRECTORY . "error/404" );
         }
     }
-
 }

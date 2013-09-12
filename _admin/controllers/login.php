@@ -8,4 +8,10 @@ class login extends c_controller
         $this->addStyle ( 'login' );
         $this->setScript ( 'login' );
     }
+
+    public function logout()
+    {
+    	session_destroy();
+    	header( "Location: " . DIRECTORY . "admin" );
+    }
 }
