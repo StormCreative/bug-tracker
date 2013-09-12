@@ -9,7 +9,7 @@
 	          <p class="success_message"><?php echo $success; ?></p>
 	        <?php endif; ?>
 	        <?php if( !!$error ) : ?>
-	          <p class="success_message"><?php echo $error; ?></p>
+	          <p class="error_message hide"><?php echo $error; ?></p>
 	        <?php endif; ?>
 	        <div class="holder">
 	        	<form action="#" method="POST" enctype="multipart/form-data">
