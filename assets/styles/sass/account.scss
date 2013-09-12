@@ -1,0 +1,134 @@
+@import "layout/structure";
+
+.main_list {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+
+	.filter {
+		border: 1px solid red;
+		display: none;
+		float: left;
+		margin: 0 20px 0 0;
+		padding: 0;
+		width: 25%;
+	}
+
+	.listing {
+		background: #EBF0F0;
+		float: left;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: 100%;
+		border-radius: 7px;
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+
+		.styled-select {
+		   width: 172px;
+		   height: 34px;
+		   overflow: hidden;
+		   position: absolute;
+		   right: 20px;;
+		   background: url(../images/new_arrow.png) no-repeat right #D9DDDF;
+
+		   select {
+			   background: transparent;
+			   color: $red;
+			   width: 178px;
+			   padding: 5px 8px;
+			   font-size: 16px;
+			   line-height: 1;
+			   border: 0;
+			   border-radius: 0;
+			   height: 34px;
+			   -webkit-appearance: none;
+			   outline: none;
+			   }
+		   }
+
+		h2 {
+			color: #363B41;
+			border-bottom: 1px solid $blue;
+			margin: 20px;
+			padding: 0 0 10px 0;
+			width: 95.5%;
+			text-transform: uppercase;
+
+
+		}
+		.holder {
+			margin: 0 0 1em 0;
+			padding: 10px 20px;
+			overflow: hidden;
+			width: 100%;
+
+			p {
+				margin: 10px 0 0 0;
+
+				small {
+					margin-left: 10px;
+				}
+			}
+
+			.form__info--title {
+				display: inline-block;
+				font-size: 17px;
+				line-height: 1.4;
+				margin-top: 0.625em;
+				width: 25%;
+				vertical-align: top;
+			}
+
+			input[type="text"], .input {
+				border: none;
+				color: #000;
+				font-size: 1em;
+				height: 32px;
+				margin: 0 0 0.5em;
+				padding: 0.25em;
+				width: 45%;
+				-webkit-border-radius: 0.3125em;
+				-moz-border-radius: 0.3125em;
+				border-radius: 0.3125em;
+				-webkit-appearance: none;
+			}
+
+			input[type="radio"] {
+				background: #AFDFE4;
+				cursor: pointer;
+				margin: 0 0.5em 0 0;
+			}
+
+			input[type="radio"]+label {
+				margin-right: 0.5em;
+			}
+
+			textarea {
+				border: none;
+				color: #000;
+				font-family: "TTRegular";
+				font-size: 1em;
+				height: 120px;
+				line-height: 1.4;
+				margin: 0 0 0.5em;
+				padding: 0.25em;
+				resize: none;
+				width: 45%;
+				-webkit-border-radius: 0.3125em;
+				-moz-border-radius: 0.3125em;
+				border-radius: 0.3125em;
+				-webkit-appearance: none;
+			}
+
+			.save_btn_label {
+				color: transparent;
+			}
+		}
+	}
+}
+
+
+

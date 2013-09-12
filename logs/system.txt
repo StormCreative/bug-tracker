@@ -112,3 +112,8 @@
 12-09-2013 14:13:07 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
 12-09-2013 14:13:09 Core/Routing/Router: Threw exception: Could not find controller "dashboard" to load
 >>>>>>> f99f3e7cbca77be1d335d333447b93e64a66a1f9
+12-09-2013 16:25:39 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 16:25:58 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 16:26:13 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 16:26:14 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
+12-09-2013 16:26:15 Core/Routing/Router: Threw exception: Could not find controller "assets" to load
