@@ -53,7 +53,7 @@
                       <?php if( !!Bugs_model::get_bugs( 'open', $client_info['id'] ) ) : ?>
                           <?php foreach( Bugs_model::get_bugs( 'open', $client_info['id'] ) as $bug ) : ?>
                               <tr>
-                                  <td class="severity visual"><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>" /></td>
+                                  <td class="<?php echo( !!$bug[ 'severity' ] ? 'severity ' . strtolower( $bug[ 'severity' ] ) : '' ); ?>"><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>" /></td>
                                   <td><?php echo $bug[ '_title' ]; ?></td>
                                   <td><?php echo $bug[ 'summary' ]; ?></td>
                                   <td>
@@ -103,7 +103,7 @@
                                 <?php if( !!Bugs_model::get_bugs( 'fixed', $client_info['id'] ) ) : ?>
                                   <?php foreach( Bugs_model::get_bugs( 'fixed', $client_info['id'] ) as $bug ) : ?>
                                       <tr>
-                                          <td class="severity minor"><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>"></td>
+                                          <td class="<?php echo( !!$bug[ 'severity' ] ? 'severity ' . strtolower( $bug[ 'severity' ] ) : '' ); ?>"><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>"></td>
                                           <td><?php echo $bug[ '_title' ]; ?></td>
                                           <td><?php echo $bug[ 'summary' ]; ?></td>
                                           <td>
@@ -153,7 +153,7 @@
                                <?php if( !!Bugs_model::get_bugs( 'closed', $client_info['id'] ) ) : ?>
                                     <?php foreach( Bugs_model::get_bugs( 'closed', $client_info['id'] ) as $bug ) : ?>
                                         <tr>
-                                            <td class="severity minor"><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>"></td>
+                                            <td class="<?php echo( !!$bug[ 'severity' ] ? 'severity ' . strtolower( $bug[ 'severity' ] ) : '' ); ?>"><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>"></td>
                                             <td><?php echo $bug[ '_title' ]; ?></td>
                                             <td><?php echo $bug[ 'summary' ]; ?></td>
                                             <td>
@@ -201,7 +201,7 @@
                                <?php if( !!Bugs_model::get_bugs( 'flagged', $client_info['id'] ) ) : ?>
                                     <?php foreach( Bugs_model::get_bugs( 'flagged', $client_info['id'] ) as $bug ) : ?>
                                         <tr>
-                                            <td><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>"></td>
+                                            <td class="<?php echo( !!$bug[ 'severity' ] ? 'severity ' . strtolower( $bug[ 'severity' ] ) : '' ); ?>"><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>"></td>
                                             <td><?php echo $bug[ '_title' ]; ?></td>
                                             <td><?php echo $bug[ 'summary' ]; ?></td>
                                             <td>
@@ -223,8 +223,7 @@
                                     <?php endforeach; ?>
                                <?php else : ?>
                                 <tr><td colspan="5" class="no_results">No results matched your criteria</td></tr>
-                              <?php endif; ?> 
-
+                              <?php endif; ?>
                             </tbody>
                           </table>
                    </form>
