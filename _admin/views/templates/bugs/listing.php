@@ -34,7 +34,7 @@
                   <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#pending"><li class="js-tabs pending-tab active-tab" data-action="pending">Pending</li></a>
                   <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#fixed"><li class="js-tabs fixed-tab" data-action="fixed">Fixed</li></a>
                   <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#closed"><li class="js-tabs closed-tab" data-action="closed">Closed</li></a>
-                  <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#flagged"><li class="js-tabs closed-tab" data-action="flagged">Flagged</li></a>
+                  <a href="<?php echo DIRECTORY; ?>admin/bugs/listing#flagged"><li class="js-tabs flagged-tab" data-action="flagged">Flagged</li></a>
               </ul>
               <div class="pending">
                 <form action="<?php echo DIRECTORY; ?>admin/bugs/listing" method="POST">
@@ -71,6 +71,7 @@
                                     <?php if( cms_admin() ) : ?>
                                       <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-trash"></a>
                                     <?php endif; ?>
+                                    <a href="<?php echo DIRECTORY; ?>admin/bugs/change/flagged/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-ok"></a>
                                   </td>
                               </tr>
                           <?php endforeach; ?>
@@ -119,6 +120,7 @@
                                             <?php if( cms_admin() ) : ?>
                                               <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-ok"></a>
                                             <?php endif; ?>
+                                            <a href="<?php echo DIRECTORY; ?>admin/bugs/change/flagged/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-ok"></a>
                                           </td>
                                       </tr>
                                   <?php endforeach; ?>
@@ -134,7 +136,8 @@
               </div>
               <div class="closed hide">
                 <form action="#" method="POST">
-                <div class="js-error"></div>
+                          <div class="js-error">
+                          </div>
                           <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_listing js-table">
                             <thead>
                               <tr>
@@ -167,6 +170,7 @@
                                               <?php if( cms_admin() ) : ?>
                                                 <a href="<?php echo DIRECTORY; ?>admin/bugs/change/open/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-folder-open"></a>
                                               <?php endif; ?>
+                                              <a href="<?php echo DIRECTORY; ?>admin/bugs/change/flagged/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-ok"></a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -176,12 +180,12 @@
 
                             </tbody>
                           </table>
-                      </div>
                    </form>
              </div>
              <div class="flagged hide">
                 <form action="#" method="POST">
-                <div class="js-error"></div>
+                          <div class="js-error">
+                          </div>
                           <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_listing js-table">
                             <thead>
                               <tr>
@@ -212,8 +216,8 @@
                                             <td>
                                               <a href="<?php echo DIRECTORY; ?>admin/bugs/edit/<?php echo $bug[ 'id' ]; ?>/?client_id=<?php echo $client_info['id']; ?>" class="edit_icon icon-edit"></a>
                                               <?php if( cms_admin() ) : ?>
-                                                <a href="<?php echo DIRECTORY; ?>admin/bugs/change/open/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-folder-open"></a>
-                                              <?php endif; ?>
+                                              <a href="<?php echo DIRECTORY; ?>admin/bugs/change/closed/?id=<?php echo $bug[ 'id' ]; ?>&client_id=<?php echo $client_info['id']; ?>" class="remove_icon icon-ok"></a>
+                                            <?php endif; ?>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -223,7 +227,6 @@
 
                             </tbody>
                           </table>
-                      </div>
                    </form>
              </div>
           </div>

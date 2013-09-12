@@ -106,6 +106,12 @@ class Bugs extends Application_controller
 				$attr[ 'closed' ] = 1;
 				$attr[ 'flagged' ] = 0;
 				break;
+
+			case 'flagged' :
+				$attr[ 'closed' ] = 0;
+				$attr[ 'fixed' ] = 0; 
+				$attr[ 'flagged' ] = 1;
+				break;
 		}
 
 		$bugs_model = new Bugs_model();
