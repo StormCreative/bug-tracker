@@ -6,15 +6,15 @@
                   <?php foreach( $all_clients as $client ) : ?>
                   	<a href="<?php echo DIRECTORY; ?>admin/bugs/listing/<?php echo $client[ 'id' ]; ?>">
                   		<li>
-                  			<p class="notfication"><?php echo Bugs_model::count_active(); ?></p>
+                  			<p class="notfication"><?php echo Bugs_model::count_active( $client[ 'id' ] ); ?></p>
                   			<p class="client"><?php echo $client[ 'title' ]; ?></p> 
                   		</li>
                   	</a>
                   <?php endforeach; ?>
             	<a href="<?php echo DIRECTORY; ?>clients/edit" class="add_project_tab">
             		<li>
-      				<p class="notfication"><i class="icon-plus"></i></p>
-      				<p class="client">Add Project</p></p>
+          				<p class="notfication"><i class="icon-plus"></i></p>
+          				<p class="client">Add Project</p>
             		</li>
             	</a>
         </div>

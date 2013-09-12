@@ -2,7 +2,7 @@
     <header class="header">
         <img src="<?php echo DIRECTORY; ?>assets/images/logo.png" class="logo"/>
         <h1>Bug Tracker content management</h1>
-        <a href="#" class="signout"><i class="icon-signout"></i> Log out</a>
+        <a href="<?php echo DIRECTORY; ?>admin/login/logout" class="signout"><i class="icon-signout"></i> Log out</a>
     </header>
 </div>
 

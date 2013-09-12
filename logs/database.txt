@@ -46,3 +46,16 @@
 12-09-2013 12:10:33 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
 12-09-2013 12:10:45 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
 12-09-2013 12:10:45 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:12:28 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:12:28 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:13:21 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:13:21 Core/Database/Query: GetObj error: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+12-09-2013 12:17:04 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+12-09-2013 12:17:04 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+12-09-2013 12:17:04 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+12-09-2013 12:17:28 Core/Database/Query: GetAssoc error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'client_id' in 'where clause'
+12-09-2013 12:17:28 Core/Database/Query: GetAssoc error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'client_id' in 'where clause'
+12-09-2013 12:17:28 Core/Database/Query: GetAssoc error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'client_id' in 'where clause'
+12-09-2013 12:17:57 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'clients_id' in where clause is ambiguous
+12-09-2013 12:17:57 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'clients_id' in where clause is ambiguous
+12-09-2013 12:17:57 Core/Database/Query: GetAssoc error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'clients_id' in where clause is ambiguous
