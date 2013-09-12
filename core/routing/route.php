@@ -15,7 +15,7 @@ class route
         $controller = $uri['controller'];
         $method = $uri['method'];
 
-        $path = PATH.$uri['directory'].$controller.'.php';
+        $path =  PATH . $uri['directory'] . $controller . '.php';
 
         // Will later clear this conditonal up
         if ( file_exists( $path ) ) {
@@ -24,8 +24,9 @@ class route
             $con = new $controller();
 
             // Default to index if we have a question mark matched
-            if ( !isset ( $method ) || $method == '' || $method == $controller || preg_match('/\?/', $method) )
+            if ( !isset ( $method ) || $method == '' || $method == $controller || preg_match('/\?/', $method) ) {
                 $method = 'index';
+            }
 
             if( !method_exists( $con, $method ) ) {
                 header( "Location: " . DIRECTORY . "error/404" );
@@ -35,10 +36,11 @@ class route
             if( $con->{$method}( (!!$uri['else'] ? $uri['else'] : '') )) {
                 return TRUE;
             }
+
         } else {
 
             $logger = new Logger('system');
-            $logger->set('Core/Routing/Router: Threw exception: Could not find controller "'.$controller.'" to load')
+            $logger->set('Core/Routing/Router: Threw exception: Could not find controller "' . $controller . '" to load')
                    ->write();
 
             header( "Location: " . DIRECTORY . "error/404" );
