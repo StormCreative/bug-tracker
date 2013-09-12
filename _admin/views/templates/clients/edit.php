@@ -7,10 +7,12 @@
 			<p><label>Title:</label><input type="text" name="clients[title]" class="medium_input" value="<?php echo $title; ?>"></p>
 			<p><label>Url:</label><input type="text" name="clients[url]" class="medium_input" value="<?php echo $url; ?>"></p>
 			<p><input type="submit" name="submit" value="Save" class="save-button"/></p>
-			</form>
+		</form>
 			<div class="holder">
 				<h2>Users</h2>
+				<p class="js-error"></p>
 	            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_listing js-table">
+	            	<input type="hidden" class="js-title-raw" value="clients_contacts" />
 	              <thead>
 	                <tr>
 	                  <th></th>
@@ -20,12 +22,12 @@
 	              </thead>
 	              <tbody class="js-sortable js-body">
 	                <?php foreach ( $clients_contacts as $client ) : ?>
-	                	<tr class="js-row-door_client-<?php echo $client['id']; ?>" id="<?php echo $client['id']; ?>">
+	                	<tr class="js-row-<?php echo $client['id']; ?>" id="<?php echo $client['id']; ?>">
 	                        <td><input type="checkbox" name="selected" value="yes" class="checkbox js-delete-checkbox"></td>
 	                        <td><?php echo $client[ 'title' ]; ?></td>    
 	                        <td>
 	                            <a href="<?php echo DIRECTORY; ?>admin/clients_contacts/edit/<?php echo $client['id']; ?>/?id=<?php echo $id; ?>" class="edit_icon icon-pencil"></a>
-	                            <a href="#" class="remove_icon icon-remove-sign js-delete-popup" data-table="door_client" data-id="<?php echo $client['id']; ?>"></a>
+	                            <a href="#" class="remove_icon icon-remove-sign js-delete-popup" data-table="clients_contacts" data-id="<?php echo $client['id']; ?>"></a>
 	                        </td>
 	                    </tr>
 	            	<?php endforeach; ?>

@@ -182,9 +182,7 @@ define(['../utils/hogan', 'Backbone'], function(hogan){
             else 
                 ids.push( this.delete_id );
 
-            console.log ( this.table );
-
-            $.ajax({ url: this.site_path + 'AJAX_listing/delete',
+            $.ajax({ url: this.site_path + 'ajax_listing/delete',
                      data: { table: this.table, ids: ids },
                      type: 'POST',
                      dataType: 'JSON',

@@ -6,14 +6,15 @@ requirejs.config({
     },
     shim: {
         'Backbone': {
-            deps: ['../utils/lodash', 'jquery'], // load dependencies
+            deps: ['../utils/lodash', 'jquery', 'jqueryui'], // load dependencies
             exports: 'Backbone' // use the global 'Backbone' as the module value
         }
     }
 });
 
-require( ['../views/Wysiwyg','settings', 'mobilenav', 'tabs'], function (Wysiwyg) {
-    var wysiwyg = new Wysiwyg();
+require( ['../views/Wysiwyg', '../views/Listing', 'settings', 'mobilenav', 'tabs'], function ( Wysiwyg, Listing ) {
+    var wysiwyg = new Wysiwyg(),
+        listing = new Listing();
 });
 
 if ( window.File && window.FileReader && window.FileList && window.Blob ) {
