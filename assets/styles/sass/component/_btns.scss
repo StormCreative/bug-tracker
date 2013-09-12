@@ -105,7 +105,33 @@
     }
 }
 
+.delete-button, .js-remove-image, .delete-btn {
+	background: #E44C40; /* Old browsers */
+	border: none;
+	display: block;
+	color: #FFF;
+	font-family: TTRegular;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 6px;
+	text-align: center;
+	width: 80px;
+	text-decoration: none;
+	width: 80px;
 
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+
+	border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+    &:hover,
+    &:focus {
+    	background: #C1392B; /* Old browsers */
+    }
+}
 
 .action {
 	background: #9B58B5;
