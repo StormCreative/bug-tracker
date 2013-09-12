@@ -19,4 +19,18 @@ class Access_model extends Activerecord
 		$access_model = new Access_model();
 		return $access_model->all();
 	}
+
+	public static function get_emails()
+	{
+		$access_model = new Access_model();
+		$all = $access_model->all();
+
+		$emails = array();
+
+		foreach( $all as $person ) {
+			$emails[] = $person[ 'email' ];
+		}
+
+		return implode( ', ', $emails );
+	}
 }

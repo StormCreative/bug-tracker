@@ -27,6 +27,14 @@
 
                 if( $bugs_model->save( $_POST[ 'bug' ] ) ) {
                     $this->addTag( 'success', 'Bug report has been saved successfully' );
+
+                    //If a ID is not sent through the POST array send a email to everyone about the new bug
+                    if( !$_POST[ 'bug' ][ 'id' ] ) {
+                        $mail = new Mail( 'A new bug has been posted from ' . Clients_model::get_title( $bugs_model->attributes[ 'clients_id' ] ) );
+                        $mail->to = Access_model::get_emails();
+                        $mail->subject = 'A new bug has been posted';
+                        $mail->send();
+                    }
                 }
                 else {
                     $this->addTag( 'error', 'Bug report could not be saved at this time' );

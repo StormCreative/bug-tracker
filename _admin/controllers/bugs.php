@@ -70,6 +70,11 @@ class Bugs extends Application_controller
 		$clients_model->find( $id );
 		$this->addTag( 'client_info', $clients_model->attributes );
 
+		//If the user filters save the selection in a session
+		if( !!$_POST[ 'person_filter' ] ) {
+			$_SESSION[ 'person_filter' ] = $_POST[ 'person_filter' ];
+		}
+
 		$this->addStyle( 'listing' );
 	}
 

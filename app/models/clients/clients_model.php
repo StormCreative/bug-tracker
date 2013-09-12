@@ -18,6 +18,14 @@ class Clients_model extends Activerecord
 		$clients = new Clients_model();
 		return $clients->all();
 	}
+
+	public function get_title( $id = "" )
+	{
+		$clients_model = new Clients_model();
+		$clients_model->find( $id );
+
+		return $clients_model->attributes[ 'title' ];
+	}
 }
 
 ?>

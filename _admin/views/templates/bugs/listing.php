@@ -2,12 +2,14 @@
     <div class="container">
           <h2><span class="js-title"><?php echo $client_info[ 'title' ]; ?> Listing</span></h2>
           <div class="styled-select">
-              <select>
-                  <option>All</option>
-                  <option>User 1</option>
-                  <option>User 2</option>
-                  <option>User 3</option>
-              </select>
+              <form action="#" method="POST">
+                <select name="person_filter" onchange="this.form.submit();">
+                    <option value="">All</option>
+                    <?php foreach( Access_model::all_users() as $person ) : ?>
+                      <option value="<?php echo $person[ 'id' ] ?>" <?php echo $_SESSION[ 'person_filter' ] == $person[ 'id' ] ? 'selected="selected"' : ''; ?>><?php echo $person[ 'title' ]; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </form>
           </div>
           <!--<a href="#" class="js-filter">Filter</a>
           <a href="<?php echo DIRECTORY; ?>admin/candidates/listing?reset=true" class="reset">Reset</a>-->
