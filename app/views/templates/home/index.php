@@ -7,13 +7,13 @@
 		<p class="email">
 			<i class="icon-envelope"></i>
 			<input type="email" name="login[email]" class="js-validate" data-type="email" value="" placeholder="Email" />
-			<span class="js-error js-error-email error-msg hide">Please provide your email</span>
+			<span class="js-error js-error-email error-msg error_message hide">Please provide your email</span>
 		</p>
 
 		<p class="password">
 			<i class="icon-lock"></i>
 			<input type="password" name="login[password]" class="js-validate" data-type="password" value="" placeholder="Password"/>
-			<span class="js-error js-error-password error-msg hide">Please provide your password</span>
+			<span class="js-error js-error-password error-msg error_message hide">Please provide your password</span>
 		</p>
 
 		<input type="submit" name="submit" class="login-button" value="Login" />
