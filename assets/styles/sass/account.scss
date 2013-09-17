@@ -82,7 +82,8 @@
 				vertical-align: top;
 			}
 
-			input[type="text"], .input {
+
+			input[type="password"] {
 				border: none;
 				color: #000;
 				font-size: 1em;
@@ -128,6 +129,10 @@
 			}
 		}
 	}
+}
+
+.error_message {
+margin-left: 235px !important;
 }
 
 
