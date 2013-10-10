@@ -6,6 +6,7 @@
 		<article class="listing">
 			<h2>Account Settings</h2>
 	        <div class="holder">
+	        	
 	        	<form action="#" method="POST" id="js-form" class="js-process-form" enctype="multipart/form-data">
 
 	        		<p class="<?php echo( is_array( $error ) ? 'success_message' : 'error_message' ); ?> <?php echo( !!$error ? '' : 'hide' ); ?>"><?php echo( is_array( $error ) ? $error['msg'] : $error ); ?></p>
