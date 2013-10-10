@@ -14,7 +14,7 @@ class Bugs extends Application_controller
 
 	public function edit ( $id = "" )
 	{
-		$this->_bugs->attributes[ 'id' ] = !!$id ? $id : $_POST['bugs']['id'];
+		$this->_bugs->attributes[ 'id' ] = !!$id ? $id : $_POST[ 'bugs' ][ 'id' ];
 		$this->_bugs->find( $this->_bugs->attributes[ 'id' ] );
 
 		if ( post_set() )
@@ -25,9 +25,10 @@ class Bugs extends Application_controller
             		$access_model = new access_model();
             		$access_model->find( $person );
 
-            		$mail = new Mail( "You have been assigned a new bug to fix on the storm digital bug tracker. For " . Clients_model::get_title( $this->_bugs->attributes[ 'clients_id' ] ) );
+            		$mail = new Mail( "<p>You have been assigned a new bug to fix on the storm digital bug tracker. For " . Clients_model::get_title( $_POST[ 'bugs' ][ 'clients_id' ] ) . "</p><p>Summary: " . $_POST[ 'bugs' ][ 'summary' ] . "</p><p>URL: " . $_POST[ 'bugs' ][ 'url' ] . "</p><p>Device: " . $_POST[ 'bugs' ][ 'device' ] . "</p><p>Description: " . $_POST[ 'bugs' ][ 'description' ] . "</p>" );
             		$mail->to = $access_model->attributes[ 'email' ];
             		$mail->subject = 'You have a bug to fix!';
+            		$mail->from = 'no-replay';
             		$mail->send();
             	}
             }
