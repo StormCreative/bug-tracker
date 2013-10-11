@@ -30,7 +30,7 @@
 
                     //If a ID is not sent through the POST array send a email to everyone about the new bug
                     if( !$_POST[ 'bug' ][ 'id' ] ) {
-                        $mail = new Mail( 'A new bug has been posted from ' . Clients_model::get_title( $bugs_model->attributes[ 'clients_id' ] ) );
+                        $mail = new Mail( '<p>A new bug has been posted from ' . Clients_model::get_title( $bugs_model->attributes[ 'clients_id' ] ) . '</p><p>URL: ' . $_POST[ 'bug' ][ 'url' ] . '</p><p>Browser: ' . $_POST[ 'bug' ][ 'browser' ] . '</p><p>Summary: ' . $_POST[ 'bug' ][ 'summary' ] . '</p><p>Device: ' . $_POST[ 'bug' ][ 'device' ] . '</p><p>' . $_POST[ 'bug' ][ 'description' ] . '</p>' );
                         $mail->to = Access_model::get_emails();
                         $mail->subject = 'A new bug has been posted';
                         $mail->send();
