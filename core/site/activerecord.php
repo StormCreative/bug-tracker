@@ -465,7 +465,7 @@ abstract class Activerecord
                 $columns = $this->table()->columns($table);
 
                 foreach ($columns as $col) {
-                    $this->_columns[] = $table.'.'.$col.' as '.$assoc.'_'.$col;
+                    $this->_columns[] = $table.'.'.$col.' as '.$one.'_'.$col;
                 }
             }
         }

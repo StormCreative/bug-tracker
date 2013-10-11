@@ -62,6 +62,9 @@ class build_bugs extends base_build
                                                                   "limit" => "11" ),
                                                                   "closed" => array ( "name" => "closed",
                                                                   "type" => "int",
+                                                                  "limit" => "11" ),
+                                                                  "access_id" => array ( "name" => "access_id",
+                                                                  "type" => "int",
                                                                   "limit" => "11" )
                                                                    );
 

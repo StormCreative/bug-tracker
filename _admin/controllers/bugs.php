@@ -42,6 +42,11 @@ class Bugs extends Application_controller
             else {
                 $_POST[ "bugs" ][ "image_id" ] = NULL;
             }
+
+            //If the bug does not have a client ID or a access ID assigned to it assign the current access ID to it
+            if( !$this->_bugs->attributes[ 'clients_contact_id' ] ) {
+            	$_POST[ 'bugs' ][ 'access_id' ] = $_SESSION[ 'user' ][ 'id' ];
+            }
 			
 			if ( !$this->_bugs->save( $_POST[ 'bugs' ] ) ) {
 				$feedback = organise_feedback( $this->_bugs->errors, TRUE );

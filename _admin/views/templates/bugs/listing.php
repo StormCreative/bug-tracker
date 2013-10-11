@@ -54,7 +54,7 @@
                           <?php foreach( Bugs_model::get_bugs( 'open', $client_info['id'] ) as $bug ) : ?>
                               <tr>
                                   <td class="<?php echo( !!$bug[ 'severity' ] ? 'severity ' . strtolower( $bug[ 'severity' ] ) : '' ); ?>"><input type="checkbox" name="user_id[]" value="<?php echo $bug[ 'id' ]; ?>" /></td>
-                                  <td><?php echo $bug[ '_title' ]; ?></td>
+                                  <td><?php echo !!$bug[ 'clients_contacts_title' ] ? $bug[ 'clients_contacts_title' ] : $bug[ 'access_title' ]; ?></td>
                                   <td><?php echo $bug[ 'summary' ]; ?></td>
                                   <td>
                                     <?php if( !!$bug[ 'assigned' ] ) : ?>

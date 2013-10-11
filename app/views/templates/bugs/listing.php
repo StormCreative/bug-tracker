@@ -43,7 +43,7 @@
 	                      <?php if( !!Bugs_model::get_bugs( 'open', $_SESSION[ 'client' ]['clients_id'] ) ) : ?>
 	                          <?php foreach( Bugs_model::get_bugs( 'open', $_SESSION[ 'client' ]['clients_id'] ) as $bug ) : ?>
 	                              <tr>
-	                                  <td><?php echo $bug[ '_title' ]; ?></td>
+	                                  <td><?php echo $bug[ 'clients_contacts_title' ]; ?></td>
 	                                  <td><?php echo $bug[ 'summary' ]; ?></td>
 	                                  <td><?php echo $bug[ 'severity' ]; ?></td>
 	                                  <td><?php echo $bug[ 'browser' ]; ?></td>
